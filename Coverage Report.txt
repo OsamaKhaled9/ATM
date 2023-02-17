@@ -1,0 +1,3338 @@
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 22:10:29 on Dec 18,2022
+# vcover report ATM_TB.ucdb -details -annotate -all 
+# Coverage Report by instance with details
+# 
+# =================================================================================
+# === Instance: /ATM_TB/DUT
+# === Design Unit: work.ATM
+# =================================================================================
+# 
+# Assertion Coverage:
+#     Assertions                       4         3         1    75.00%
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /ATM_TB/DUT/assert__3
+#                      ATM.v(716)                         0          0
+# /ATM_TB/DUT/assert__2
+#                      ATM.v(715)                         0          1
+# /ATM_TB/DUT/assert__1
+#                      ATM.v(714)                         0          1
+# /ATM_TB/DUT/assert__0
+#                      ATM.v(713)                         0          1
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                       142       111        31    78.16%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /ATM_TB/DUT
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File ATM.v
+# ------------------------------------IF Branch------------------------------------
+#     58                                   5548610     Count coming in to IF
+#     58              1                    3125224       if(!Reset)
+# 
+#     62              1                    2423386       else
+# 
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------CASE Branch------------------------------------
+#     71                                   8476132     Count coming in to CASE
+#     73              1                    3751078     Idle     						: begin
+# 
+#     82              1                    1251352     Insert_Card     				: begin
+# 
+#     86              1                    1250090     Cardless_Transaction			: begin
+# 
+#     90              1                    1458968     Choose_Language     			: begin
+# 
+#     99              1                     416773     Enter_Pin_Or_OTP     			: begin
+# 
+#     108             1                     272679     Choose_Transaction     			: begin
+# 
+#     131             1                       5180     View_Balance     				: begin
+# 
+#     140             1                       6008     Deposit     					: begin
+# 
+#     149             1                       1716     Confirm_Deposit     			: begin
+# 
+#     158             1                       6356     Withdraw     					: begin
+# 
+#     167             1                       1847     Enter_Value_Manually     		: begin
+# 
+#     176             1                       2082     Check_Sufficient_Funds     		: begin
+# 
+#     185             1                          2     Confirm_Withdraw     			: begin
+# 
+#     194             1                       6071     Exchange_Currency     			: begin
+# 
+#     203             1                       1798     Confirm_Exchange     			: begin
+# 
+#     212             1                       5150     Fawry_Payments	     			: begin
+# 
+#     216             1                       3022     Choose_Service     				: begin
+# 
+#     225             1                        856     Enter_Mobile_No     			: begin
+# 
+#     234             1                        416     Confirm_Service     			: begin
+# 
+#     243             1                       5258     Money_Transfer     				: begin
+# 
+#     247             1                       3554     Bank_Account_And_Transfer_Value : begin
+# 
+#     256             1                       1764     Confirm_Balance_Available     	: begin
+# 
+#     265             1                    ***0***     Confirm_Transfer     			: begin
+# 
+#     274             1                       5140     Mini_Bank_Statement     		: begin
+# 
+#     283             1                       5904     Credit_Card_Settlement     		: begin
+# 
+#     292             1                       1688     Deposit_Desired_Settlement_Amount : begin
+# 
+#     299             1                        814     Confirm_Settlement     			: begin
+# 
+#     309             1                       3709     Print_Reciept     				: begin
+# 
+#     313             1                       5542     One_More_Transaction     		: begin
+# 
+#     322             1                       1314     Eject_Card     					: begin
+# 
+#     327             1                          1     default :   next_state = Idle ;		 
+# 
+# Branch totals: 30 hits of 31 branches = 96.77%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     74                                   3751078     Count coming in to IF
+#     74              1                    1876042     								if(Cardless == 1'b0)
+# 
+#     76              1                    1875036     								else if (Cardless == 1'b1)
+# 
+#     78              1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     91                                   1458968     Count coming in to IF
+#     91              1                     729171     								if(Language == 1'b0)
+# 
+#     93              1                     729797     								else if (Language == 1'b1)
+# 
+#     95              1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     100                                   416773     Count coming in to IF
+#     100             1                         20     								if(User_Pass != Correct_Pass)
+# 
+#     102             1                     416753     								else if (User_Pass == Correct_Pass)
+# 
+#     104             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     109                                   272679     Count coming in to IF
+#     109             1                      17143     								if(Opcode == 4'b0000)
+# 
+#     111             1                       8572     								else if ( (Opcode == 4'b0001) && (Cardless == 1'b0) )
+# 
+#     113             1                       8446     								else if ( (Opcode == 4'b0011) && (Cardless == 1'b0) )
+# 
+#     115             1                       8509     								else if ( (Opcode == 4'b0010) && (Cardless == 1'b0) )
+# 
+#     117             1                       8330     								else if ( (Opcode == 4'b0110) && (Cardless == 1'b1) )
+# 
+#     119             1                       8441     								else if ( (Opcode == 4'b0111) && (Cardless == 1'b1) )
+# 
+#     121             1                       8647     								else if ( (Opcode == 4'b0101) && (Cardless == 1'b0) )
+# 
+#     123             1                       8481     								else if ( (Opcode == 4'b0100) && (Cardless == 1'b0) )
+# 
+#     125             1                       8319     								else if ( (Opcode == 4'b1100) && (Cardless == 1'b0) )
+# 
+#     127             1                     187791     								else
+# 
+# Branch totals: 10 hits of 10 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     132                                     5180     Count coming in to IF
+#     132             1                       2641     								if(Receipt == 1'b0)
+# 
+#     134             1                       2539     								else if (Receipt == 1'b1)
+# 
+#     136             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     141                                     6008     Count coming in to IF
+#     141             1                       2989     								if(Money_Deposited == 1'b0)
+# 
+#     143             1                       3019     								else if (Money_Deposited == 1'b1)
+# 
+#     145             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     150                                     1716     Count coming in to IF
+#     150             1                        898     								if(Receipt == 1'b0)
+# 
+#     152             1                        818     								else if (Receipt == 1'b1)
+# 
+#     154             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     159                                     6356     Count coming in to IF
+#     159             1                       3212     								if(Quick_List == 1'b0)
+# 
+#     161             1                       3144     								else if (Quick_List == 1'b1)
+# 
+#     163             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     168                                     1847     Count coming in to IF
+#     168             1                        905     								if(Manual_Withdraw_Value == 1'b0)
+# 
+#     170             1                        942     								else if (Manual_Withdraw_Value == 1'b1)
+# 
+#     172             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     177                                     2082     Count coming in to IF
+#     177             1                       2078     								if(Withdraw_Value > Existing_Balance)
+# 
+#     179             1                          4     								else if (Withdraw_Value <= Existing_Balance)
+# 
+#     181             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     186                                        2     Count coming in to IF
+#     186             1                    ***0***     								if(Receipt == 1'b0)
+# 
+#     188             1                          2     								else if (Receipt == 1'b1)
+# 
+#     190             1                    ***0***     								else
+# 
+# Branch totals: 1 hit of 3 branches = 33.33%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     195                                     6071     Count coming in to IF
+#     195             1                       3063     								if(Currency_Deposited == 1'b0)
+# 
+#     197             1                       3008     								else if (Currency_Deposited == 1'b1)
+# 
+#     199             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     204                                     1798     Count coming in to IF
+#     204             1                        903     								if(Receipt == 1'b0)
+# 
+#     206             1                        895     								else if (Receipt == 1'b1)
+# 
+#     208             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     217                                     3022     Count coming in to IF
+#     217             1                       1515     								if(Service_Chosen == 1'b0)
+# 
+#     219             1                       1507     								else if (Service_Chosen == 1'b1)
+# 
+#     221             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     226                                      856     Count coming in to IF
+#     226             1                    ***0***     								if(User_Mobile_No != Correct_Mobile_No)
+# 
+#     228             1                        856     								else if (User_Mobile_No == Correct_Mobile_No)
+# 
+#     230             1                    ***0***     								else
+# 
+# Branch totals: 1 hit of 3 branches = 33.33%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     235                                      416     Count coming in to IF
+#     235             1                        197     								if(Receipt == 1'b0)
+# 
+#     237             1                        219     								else if (Receipt == 1'b1)
+# 
+#     239             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     248                                     3554     Count coming in to IF
+#     248             1                    ***0***     								if(User_Account_No != Correct_Account_No)
+# 
+#     250             1                       3554     								else if (User_Account_No == Correct_Account_No)
+# 
+#     252             1                    ***0***     								else
+# 
+# Branch totals: 1 hit of 3 branches = 33.33%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     257                                     1764     Count coming in to IF
+#     257             1                       1762     								if(Transfer_Value > Existing_Balance)
+# 
+#     259             1                          2     								else if (Transfer_Value <= Existing_Balance)
+# 
+#     261             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     266                                  ***0***     Count coming in to IF
+#     266             1                    ***0***     								if(Receipt == 1'b0)
+# 
+#     268             1                    ***0***     								else if (Receipt == 1'b1)
+# 
+#     270             1                    ***0***     								else
+# 
+# Branch totals: 0 hits of 3 branches = 0.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     275                                     5140     Count coming in to IF
+#     275             1                       2551     								if(Receipt == 1'b0)
+# 
+#     277             1                       2589     								else if (Receipt == 1'b1)
+# 
+#     279             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     284                                     5904     Count coming in to IF
+#     284             1                       2936     								if(Credit_Card_Inserted == 1'b0)
+# 
+#     286             1                       2968     								else if (Credit_Card_Inserted == 1'b1)
+# 
+#     288             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     293                                     1688     Count coming in to IF
+#     293             1                       1688     								if(Settlement_Amount > 0)
+# 
+#     295             1                    ***0***     								else
+# 
+# Branch totals: 1 hit of 2 branches = 50.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     300                                      814     Count coming in to IF
+#     300             1                        399     								if(Receipt == 1'b0)
+# 
+#     302             1                        415     								else if (Receipt == 1'b1)
+# 
+#     304             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     314                                     5542     Count coming in to IF
+#     314             1                       2735     								if(Another_Operation == 1'b0)
+# 
+#     316             1                       2807     								else if (Another_Operation == 1'b1)
+# 
+#     318             1                    ***0***     								else
+# 
+# Branch totals: 2 hits of 3 branches = 66.66%
+# 
+# ------------------------------------CASE Branch------------------------------------
+#     336                                  3476133     Count coming in to CASE
+#     338             1                    1250726     Idle     						: begin
+# 
+#     350             1                     625680     Insert_Card     				: begin
+# 
+#     362             1                     625045     Cardless_Transaction     		: begin
+# 
+#     374             1                     625640     Choose_Language     			: begin
+# 
+#     386             1                     208382     Enter_Pin_Or_OTP     			: begin
+# 
+#     398             1                     104681     Choose_Transaction     			: begin
+# 
+#     410             1                       2590     View_Balance     				: begin
+# 
+#     422             1                       2575     Deposit     					: begin
+# 
+#     434             1                        858     Confirm_Deposit     			: begin
+# 
+#     446             1                       3179     Withdraw     					: begin
+# 
+#     458             1                        804     Enter_Value_Manually     		: begin
+# 
+#     470             1                       1041     Check_Sufficient_Funds     		: begin
+# 
+#     482             1                          2     Confirm_Withdraw     			: begin
+# 
+#     494             1                       2603     Exchange_Currency     			: begin
+# 
+#     506             1                        899     Confirm_Exchange     			: begin
+# 
+#     518             1                       2575     Fawry_Payments     				: begin
+# 
+#     530             1                       1282     Choose_Service     				: begin
+# 
+#     542             1                        428     Enter_Mobile_No     			: begin
+# 
+#     554             1                        208     Confirm_Service     			: begin
+# 
+#     566             1                       2629     Money_Transfer     				: begin
+# 
+#     578             1                       1777     Bank_Account_And_Transfer_Value : begin
+# 
+#     590             1                        882     Confirm_Balance_Available     	: begin
+# 
+#     602             1                    ***0***     Confirm_Transfer     			: begin
+# 
+#     614             1                       2570     Mini_Bank_Statement     		: begin
+# 
+#     626             1                       2542     Credit_Card_Settlement     		: begin
+# 
+#     638             1                        844     Deposit_Desired_Settlement_Amount: begin
+# 
+#     650             1                        407     Confirm_Settlement     			: begin
+# 
+#     662             1                       1856     Print_Reciept     				: begin
+# 
+#     674             1                       2771     One_More_Transaction     		: begin
+# 
+#     686             1                        657     Eject_Card     					: begin
+# 
+#     698             1                    ***0***     default 						: begin
+# 
+# Branch totals: 29 hits of 31 branches = 93.54%
+# 
+# 
+# Condition Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Conditions                      28        20         8    71.42%
+# 
+# ================================Condition Details================================
+# 
+# Condition Coverage for instance /ATM_TB/DUT --
+# 
+#   File ATM.v
+# ----------------Focused Condition View-------------------
+# Line       100 Item    1  (User_Pass != Correct_Pass)
+# Condition totals: 1 of 1 input term covered = 100.00%
+# 
+#                    Input Term   Covered  Reason for no coverage   Hint
+#                   -----------  --------  -----------------------  --------------
+#   (User_Pass != Correct_Pass)         Y
+# 
+#      Rows:       Hits  FEC Target                     Non-masking condition(s)      
+#  ---------  ---------  --------------------           -------------------------     
+#   Row   1:          1  (User_Pass != Correct_Pass)_0  -                             
+#   Row   2:          1  (User_Pass != Correct_Pass)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       102 Item    1  (User_Pass == Correct_Pass)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                    Input Term   Covered  Reason for no coverage   Hint
+#                   -----------  --------  -----------------------  --------------
+#   (User_Pass == Correct_Pass)         N  '_0' not hit             Hit '_0'
+# 
+#      Rows:       Hits  FEC Target                     Non-masking condition(s)      
+#  ---------  ---------  --------------------           -------------------------     
+#   Row   1:    ***0***  (User_Pass == Correct_Pass)_0  -                             
+#   Row   2:          1  (User_Pass == Correct_Pass)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       109 Item    1  (Opcode == 0)
+# Condition totals: 1 of 1 input term covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 0)         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 0)_0       -                             
+#   Row   2:          1  (Opcode == 0)_1       -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       111 Item    1  ((Opcode == 1) && ~Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 1)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 1)_0       -                             
+#   Row   2:          1  (Opcode == 1)_1       ~Cardless                     
+#   Row   3:          1  Cardless_0            (Opcode == 1)                 
+#   Row   4:          1  Cardless_1            (Opcode == 1)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       113 Item    1  ((Opcode == 3) && ~Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 3)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 3)_0       -                             
+#   Row   2:          1  (Opcode == 3)_1       ~Cardless                     
+#   Row   3:          1  Cardless_0            (Opcode == 3)                 
+#   Row   4:          1  Cardless_1            (Opcode == 3)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       115 Item    1  ((Opcode == 2) && ~Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 2)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 2)_0       -                             
+#   Row   2:          1  (Opcode == 2)_1       ~Cardless                     
+#   Row   3:          1  Cardless_0            (Opcode == 2)                 
+#   Row   4:          1  Cardless_1            (Opcode == 2)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       117 Item    1  ((Opcode == 6) && Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 6)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 6)_0       -                             
+#   Row   2:          1  (Opcode == 6)_1       Cardless                      
+#   Row   3:          1  Cardless_0            (Opcode == 6)                 
+#   Row   4:          1  Cardless_1            (Opcode == 6)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       119 Item    1  ((Opcode == 7) && Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 7)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 7)_0       -                             
+#   Row   2:          1  (Opcode == 7)_1       Cardless                      
+#   Row   3:          1  Cardless_0            (Opcode == 7)                 
+#   Row   4:          1  Cardless_1            (Opcode == 7)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       121 Item    1  ((Opcode == 5) && ~Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 5)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 5)_0       -                             
+#   Row   2:          1  (Opcode == 5)_1       ~Cardless                     
+#   Row   3:          1  Cardless_0            (Opcode == 5)                 
+#   Row   4:          1  Cardless_1            (Opcode == 5)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       123 Item    1  ((Opcode == 4) && ~Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#      Input Term   Covered  Reason for no coverage   Hint
+#     -----------  --------  -----------------------  --------------
+#   (Opcode == 4)         Y
+#        Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 4)_0       -                             
+#   Row   2:          1  (Opcode == 4)_1       ~Cardless                     
+#   Row   3:          1  Cardless_0            (Opcode == 4)                 
+#   Row   4:          1  Cardless_1            (Opcode == 4)                 
+# 
+# ----------------Focused Condition View-------------------
+# Line       125 Item    1  ((Opcode == 12) && ~Cardless)
+# Condition totals: 2 of 2 input terms covered = 100.00%
+# 
+#       Input Term   Covered  Reason for no coverage   Hint
+#      -----------  --------  -----------------------  --------------
+#   (Opcode == 12)         Y
+#         Cardless         Y
+# 
+#      Rows:       Hits  FEC Target            Non-masking condition(s)      
+#  ---------  ---------  --------------------  -------------------------     
+#   Row   1:          1  (Opcode == 12)_0      -                             
+#   Row   2:          1  (Opcode == 12)_1      ~Cardless                     
+#   Row   3:          1  Cardless_0            (Opcode == 12)                
+#   Row   4:          1  Cardless_1            (Opcode == 12)                
+# 
+# ----------------Focused Condition View-------------------
+# Line       177 Item    1  (Withdraw_Value > Existing_Balance)
+# Condition totals: 1 of 1 input term covered = 100.00%
+# 
+#                            Input Term   Covered  Reason for no coverage   Hint
+#                           -----------  --------  -----------------------  --------------
+#   (Withdraw_Value > Existing_Balance)         Y
+# 
+#      Rows:       Hits  FEC Target                             Non-masking condition(s)      
+#  ---------  ---------  --------------------                   -------------------------     
+#   Row   1:          1  (Withdraw_Value > Existing_Balance)_0  -                             
+#   Row   2:          1  (Withdraw_Value > Existing_Balance)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       179 Item    1  (Withdraw_Value <= Existing_Balance)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                             Input Term   Covered  Reason for no coverage   Hint
+#                            -----------  --------  -----------------------  --------------
+#   (Withdraw_Value <= Existing_Balance)         N  '_0' not hit             Hit '_0'
+# 
+#      Rows:       Hits  FEC Target                              Non-masking condition(s)      
+#  ---------  ---------  --------------------                    -------------------------     
+#   Row   1:    ***0***  (Withdraw_Value <= Existing_Balance)_0  -                             
+#   Row   2:          1  (Withdraw_Value <= Existing_Balance)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       226 Item    1  (User_Mobile_No != Correct_Mobile_No)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                              Input Term   Covered  Reason for no coverage   Hint
+#                             -----------  --------  -----------------------  --------------
+#   (User_Mobile_No != Correct_Mobile_No)         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target                               Non-masking condition(s)      
+#  ---------  ---------  --------------------                     -------------------------     
+#   Row   1:          1  (User_Mobile_No != Correct_Mobile_No)_0  -                             
+#   Row   2:    ***0***  (User_Mobile_No != Correct_Mobile_No)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       228 Item    1  (User_Mobile_No == Correct_Mobile_No)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                              Input Term   Covered  Reason for no coverage   Hint
+#                             -----------  --------  -----------------------  --------------
+#   (User_Mobile_No == Correct_Mobile_No)         N  '_0' not hit             Hit '_0'
+# 
+#      Rows:       Hits  FEC Target                               Non-masking condition(s)      
+#  ---------  ---------  --------------------                     -------------------------     
+#   Row   1:    ***0***  (User_Mobile_No == Correct_Mobile_No)_0  -                             
+#   Row   2:          1  (User_Mobile_No == Correct_Mobile_No)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       248 Item    1  (User_Account_No != Correct_Account_No)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                                Input Term   Covered  Reason for no coverage   Hint
+#                               -----------  --------  -----------------------  --------------
+#   (User_Account_No != Correct_Account_No)         N  '_1' not hit             Hit '_1'
+# 
+#      Rows:       Hits  FEC Target                                 Non-masking condition(s)      
+#  ---------  ---------  --------------------                       -------------------------     
+#   Row   1:          1  (User_Account_No != Correct_Account_No)_0  -                             
+#   Row   2:    ***0***  (User_Account_No != Correct_Account_No)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       250 Item    1  (User_Account_No == Correct_Account_No)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                                Input Term   Covered  Reason for no coverage   Hint
+#                               -----------  --------  -----------------------  --------------
+#   (User_Account_No == Correct_Account_No)         N  '_0' not hit             Hit '_0'
+# 
+#      Rows:       Hits  FEC Target                                 Non-masking condition(s)      
+#  ---------  ---------  --------------------                       -------------------------     
+#   Row   1:    ***0***  (User_Account_No == Correct_Account_No)_0  -                             
+#   Row   2:          1  (User_Account_No == Correct_Account_No)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       257 Item    1  (Transfer_Value > Existing_Balance)
+# Condition totals: 1 of 1 input term covered = 100.00%
+# 
+#                            Input Term   Covered  Reason for no coverage   Hint
+#                           -----------  --------  -----------------------  --------------
+#   (Transfer_Value > Existing_Balance)         Y
+# 
+#      Rows:       Hits  FEC Target                             Non-masking condition(s)      
+#  ---------  ---------  --------------------                   -------------------------     
+#   Row   1:          1  (Transfer_Value > Existing_Balance)_0  -                             
+#   Row   2:          1  (Transfer_Value > Existing_Balance)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       259 Item    1  (Transfer_Value <= Existing_Balance)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                             Input Term   Covered  Reason for no coverage   Hint
+#                            -----------  --------  -----------------------  --------------
+#   (Transfer_Value <= Existing_Balance)         N  '_0' not hit             Hit '_0'
+# 
+#      Rows:       Hits  FEC Target                              Non-masking condition(s)      
+#  ---------  ---------  --------------------                    -------------------------     
+#   Row   1:    ***0***  (Transfer_Value <= Existing_Balance)_0  -                             
+#   Row   2:          1  (Transfer_Value <= Existing_Balance)_1  -                             
+# 
+# ----------------Focused Condition View-------------------
+# Line       293 Item    1  (Settlement_Amount > 0)
+# Condition totals: 0 of 1 input term covered = 0.00%
+# 
+#                Input Term   Covered  Reason for no coverage   Hint
+#               -----------  --------  -----------------------  --------------
+#   (Settlement_Amount > 0)         N  '_0' not hit             Hit '_0'
+# 
+#      Rows:       Hits  FEC Target                 Non-masking condition(s)      
+#  ---------  ---------  --------------------       -------------------------     
+#   Row   1:    ***0***  (Settlement_Amount > 0)_0  -                             
+#   Row   2:          1  (Settlement_Amount > 0)_1  -                             
+# 
+# 
+# FSM Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     FSM States                      30        29         1    96.66%
+#     FSM Transitions                 78        72         6    92.30%
+# 
+# ================================FSM Details================================
+# 
+# FSM Coverage for instance /ATM_TB/DUT --
+# 
+# FSM_ID: current_state
+#     Current State Object : current_state
+#     ----------------------
+#     State Value MapInfo :
+#     ---------------------
+# Line          State Name               Value
+# ----          ----------               -----
+#   73                Idle                   0
+#   86Cardless_Transaction                   3
+#   82         Insert_Card                   1
+#   90     Choose_Language                   2
+#   99    Enter_Pin_Or_OTP                   6
+#  108  Choose_Transaction                   7
+#  283Credit_Card_Settlement                  20
+#  274 Mini_Bank_Statement                  28
+#  243      Money_Transfer                  26
+#  212      Fawry_Payments                   8
+#  194   Exchange_Currency                  11
+#  158            Withdraw                  13
+#  140             Deposit                   4
+#  131        View_Balance                   5
+#  309       Print_Reciept                  22
+#  313One_More_Transaction                  18
+#  149     Confirm_Deposit                  12
+#  176Check_Sufficient_Funds                  14
+#  167Enter_Value_Manually                  15
+#  185    Confirm_Withdraw                  10
+#  203    Confirm_Exchange                   9
+#  216      Choose_Service                  24
+#  225     Enter_Mobile_No                  25
+#  234     Confirm_Service                  27
+#  247Bank_Account_And_Transfer_Value                  30
+#  256Confirm_Balance_Available                  31
+#  265    Confirm_Transfer                  29
+#  292Deposit_Desired_Settlement_Amount                  21
+#  299  Confirm_Settlement                  23
+#  322          Eject_Card                  19
+#     Covered States :
+#     ----------------
+#                    State           Hit_count
+#                    -----           ---------
+#                     Idle             3125560          
+#     Cardless_Transaction              625045          
+#              Insert_Card              625680          
+#          Choose_Language              781429          
+#         Enter_Pin_Or_OTP              208385          
+#       Choose_Transaction              144104          
+#     Credit_Card_Settlement                3174          
+#      Mini_Bank_Statement                2570          
+#           Money_Transfer                2629          
+#           Fawry_Payments                2575          
+#        Exchange_Currency                3230          
+#                 Withdraw                3179          
+#                  Deposit                3216          
+#             View_Balance                2590          
+#            Print_Reciept                1856          
+#     One_More_Transaction                2771          
+#          Confirm_Deposit                 858          
+#     Check_Sufficient_Funds                1041          
+#     Enter_Value_Manually                 989          
+#         Confirm_Withdraw                   2          
+#         Confirm_Exchange                 899          
+#           Choose_Service                1625          
+#          Enter_Mobile_No                 428          
+#          Confirm_Service                 208          
+#     Bank_Account_And_Transfer_Value                1777          
+#     Confirm_Balance_Available                 882          
+#     Deposit_Desired_Settlement_Amount                 844          
+#       Confirm_Settlement                 407          
+#               Eject_Card                 657          
+#     Covered Transitions :
+#     ---------------------
+# Line            Trans_ID           Hit_count          Transition          
+# ----            --------           ---------          ----------          
+#   77                   0              625045          Idle -> Cardless_Transaction          
+#   75                   1              625680          Idle -> Insert_Card           
+#   87                   2              313211          Cardless_Transaction -> Choose_Language          
+#   60                   3              311834          Cardless_Transaction -> Idle          
+#   83                   4              312429          Insert_Card -> Choose_Language          
+#   60                   5              313251          Insert_Card -> Idle           
+#   94                   6              208382          Choose_Language -> Enter_Pin_Or_OTP          
+#   60                   7              417258          Choose_Language -> Idle          
+#  103                   8              103957          Enter_Pin_Or_OTP -> Choose_Transaction          
+#   60                   9              104425          Enter_Pin_Or_OTP -> Idle          
+#  126                  10                2542          Choose_Transaction -> Credit_Card_Settlement          
+#  124                  11                2570          Choose_Transaction -> Mini_Bank_Statement          
+#  122                  12                2629          Choose_Transaction -> Money_Transfer          
+#  120                  13                2575          Choose_Transaction -> Fawry_Payments          
+#  118                  14                2603          Choose_Transaction -> Exchange_Currency          
+#  116                  15                2656          Choose_Transaction -> Withdraw          
+#  114                  16                2575          Choose_Transaction -> Deposit          
+#  112                  17                2590          Choose_Transaction -> View_Balance          
+#   60                  18               83941          Choose_Transaction -> Idle          
+#  287                  19                 844          Credit_Card_Settlement -> Deposit_Desired_Settlement_Amount          
+#   60                  20                1698          Credit_Card_Settlement -> Idle          
+#  278                  21                 649          Mini_Bank_Statement -> Print_Reciept          
+#  276                  22                 617          Mini_Bank_Statement -> One_More_Transaction          
+#   60                  23                1304          Mini_Bank_Statement -> Idle          
+#  244                  24                1333          Money_Transfer -> Bank_Account_And_Transfer_Value          
+#   60                  25                1296          Money_Transfer -> Idle          
+#  213                  26                1282          Fawry_Payments -> Choose_Service          
+#   60                  27                1293          Fawry_Payments -> Idle          
+#  198                  28                 899          Exchange_Currency -> Confirm_Exchange          
+#   60                  29                1704          Exchange_Currency -> Idle          
+#  162                  30                 782          Withdraw -> Check_Sufficient_Funds          
+#  160                  31                 804          Withdraw -> Enter_Value_Manually          
+#   60                  32                1593          Withdraw -> Idle              
+#  144                  33                 858          Deposit -> Confirm_Deposit          
+#   60                  34                1717          Deposit -> Idle               
+#  135                  35                 634          View_Balance -> Print_Reciept          
+#  133                  36                 637          View_Balance -> One_More_Transaction          
+#   60                  37                1319          View_Balance -> Idle          
+#  310                  38                 904          Print_Reciept -> One_More_Transaction          
+#   60                  39                 952          Print_Reciept -> Idle          
+#  317                  40                 724          One_More_Transaction -> Choose_Transaction          
+#  315                  41                 657          One_More_Transaction -> Eject_Card          
+#   60                  42                1390          One_More_Transaction -> Idle          
+#  153                  43                 192          Confirm_Deposit -> Print_Reciept          
+#  151                  44                 221          Confirm_Deposit -> One_More_Transaction          
+#   60                  45                 445          Confirm_Deposit -> Idle          
+#  180                  46                   2          Check_Sufficient_Funds -> Confirm_Withdraw          
+#  178                  47                 523          Check_Sufficient_Funds -> Withdraw          
+#   60                  48                 516          Check_Sufficient_Funds -> Idle          
+#  171                  49                 259          Enter_Value_Manually -> Check_Sufficient_Funds          
+#   60                  50                 545          Enter_Value_Manually -> Idle          
+#  189                  51                   2          Confirm_Withdraw -> Print_Reciept          
+#  207                  54                 223          Confirm_Exchange -> Print_Reciept          
+#  205                  55                 241          Confirm_Exchange -> One_More_Transaction          
+#   60                  56                 435          Confirm_Exchange -> Idle          
+#  220                  57                 428          Choose_Service -> Enter_Mobile_No          
+#   60                  58                 854          Choose_Service -> Idle          
+#  229                  59                 208          Enter_Mobile_No -> Confirm_Service          
+#   60                  60                 220          Enter_Mobile_No -> Idle          
+#  238                  61                  50          Confirm_Service -> Print_Reciept          
+#  236                  62                  44          Confirm_Service -> One_More_Transaction          
+#   60                  63                 114          Confirm_Service -> Idle          
+#  251                  64                 882          Bank_Account_And_Transfer_Value -> Confirm_Balance_Available          
+#   60                  65                 895          Bank_Account_And_Transfer_Value -> Idle          
+#  258                  67                 444          Confirm_Balance_Available -> Bank_Account_And_Transfer_Value          
+#   60                  68                 438          Confirm_Balance_Available -> Idle          
+#  294                  72                 407          Deposit_Desired_Settlement_Amount -> Confirm_Settlement          
+#   60                  73                 437          Deposit_Desired_Settlement_Amount -> Idle          
+#  303                  74                 106          Confirm_Settlement -> Print_Reciept          
+#  301                  75                 107          Confirm_Settlement -> One_More_Transaction          
+#   60                  76                 194          Confirm_Settlement -> Idle          
+#  323                  77                 657          Eject_Card -> Idle            
+#     Uncovered States :
+#     ------------------
+#                    State
+#                    -----
+#         Confirm_Transfer
+#     Uncovered Transitions :
+#     -----------------------
+# Line            Trans_ID          Transition          
+# ----            --------          ----------          
+#  187                  52          Confirm_Withdraw -> One_More_Transaction
+#   60                  53          Confirm_Withdraw -> Idle
+#  260                  66          Confirm_Balance_Available -> Confirm_Transfer
+#  269                  69          Confirm_Transfer -> Print_Reciept
+#  267                  70          Confirm_Transfer -> One_More_Transaction
+#   60                  71          Confirm_Transfer -> Idle
+# 
+# 
+#     Summary                       Bins      Hits    Misses  Coverage
+#     -------                       ----      ----    ------  --------
+#         FSM States                  30        29         1    96.66%
+#         FSM Transitions             78        72         6    92.30%
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                     373       327        46    87.66%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /ATM_TB/DUT --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File ATM.v
+#     5                                                module ATM (
+# 
+#     6                                                input  wire        Clock, Reset, Cardless, Language, Money_Deposited, Quick_List, Manual_Withdraw_Value, Currency_Deposited, Service_Chosen,Credit_Card_Inserted, Receipt, Another_Operation,
+# 
+#     7                                                input  wire [3:0]  Opcode,User_Pass,
+# 
+#     8                                                input wire  [10:0] User_Mobile_No,
+# 
+#     9                                                input wire  [15:0] User_Account_No,
+# 
+#     10                                               input wire  [31:0] Withdraw_Value,Transfer_Value,Settlement_Amount,
+# 
+#     11                                               output reg         ATM_Usage_Finished, Balance_Shown, Deposited_Successfully, Withdrawed_Successfully, Exchanged_Successfully, Fawry_Service_Done, Transferred_Successfully, Bank_Statement_Produced, Debt_Paid_Off
+# 
+#     12                                               );
+# 
+#     13                                               
+# 
+#     14              1                          1     reg [3:0]  Correct_Pass = 4'b1010;
+# 
+#     15              1                          1     reg [10:0] Correct_Mobile_No = 11'b10000010111;
+# 
+#     16              1                          1     reg [15:0] Correct_Account_No = 16'hD903;
+# 
+#     17              1                          1     reg [31:0] Existing_Balance = 32'h000F4240;
+# 
+#     18                                               
+# 
+#     19                                               
+# 
+#     20                                               localparam  [4:0]   Idle                              = 5'b00000,
+# 
+#     21                                               					Insert_Card                       = 5'b00001,
+# 
+#     22                                               					Cardless_Transaction              = 5'b00011,
+# 
+#     23                                               					Choose_Language                   = 5'b00010,
+# 
+#     24                                               					Enter_Pin_Or_OTP                  = 5'b00110,
+# 
+#     25                                               					Choose_Transaction                = 5'b00111,
+# 
+#     26                                               					View_Balance                      = 5'b00101,
+# 
+#     27                                               					Deposit                           = 5'b00100,
+# 
+#     28                                               					Confirm_Deposit                   = 5'b01100,
+# 
+#     29                                               					Withdraw                          = 5'b01101,
+# 
+#     30                                               					Enter_Value_Manually              = 5'b01111,
+# 
+#     31                                               					Check_Sufficient_Funds            = 5'b01110,
+# 
+#     32                                               					Confirm_Withdraw                  = 5'b01010,
+# 
+#     33                                               					Exchange_Currency                 = 5'b01011,
+# 
+#     34                                               					Confirm_Exchange                  = 5'b01001,
+# 
+#     35                                               					Fawry_Payments                    = 5'b01000,
+# 
+#     36                                               					Choose_Service                    = 5'b11000,
+# 
+#     37                                               					Enter_Mobile_No                   = 5'b11001,
+# 
+#     38                                               					Confirm_Service                   = 5'b11011,
+# 
+#     39                                               					Money_Transfer                    = 5'b11010,
+# 
+#     40                                               					Bank_Account_And_Transfer_Value   = 5'b11110,
+# 
+#     41                                               					Confirm_Balance_Available         = 5'b11111,
+# 
+#     42                                               					Confirm_Transfer                  = 5'b11101,
+# 
+#     43                                               					Mini_Bank_Statement               = 5'b11100,
+# 
+#     44                                               					Credit_Card_Settlement            = 5'b10100,
+# 
+#     45                                               					Deposit_Desired_Settlement_Amount = 5'b10101,
+# 
+#     46                                               					Confirm_Settlement                = 5'b10111,
+# 
+#     47                                               					Print_Reciept                     = 5'b10110,
+# 
+#     48                                               					One_More_Transaction              = 5'b10010,
+# 
+#     49                                               					Eject_Card                        = 5'b10011;
+# 
+#     50                                               					
+# 
+#     51                                               					 
+# 
+#     52                                               reg    [4:0]         current_state,
+# 
+#     53                                                                    next_state;
+# 
+#     54                                               		
+# 
+#     55                                               // state transition 		
+# 
+#     56              1                    5548610     always @(posedge Clock or negedge Reset)
+# 
+#     57                                                begin
+# 
+#     58                                                 if(!Reset)
+# 
+#     59                                                  begin
+# 
+#     60              1                    3125224          current_state <= Idle ;
+# 
+#     61                                                  end
+# 
+#     62                                                 else
+# 
+#     63                                                  begin
+# 
+#     64              1                    2423386          current_state <= next_state ;
+# 
+#     65                                                  end
+# 
+#     66                                                end
+# 
+#     67                                                
+# 
+#     68                                               // next_state logic
+# 
+#     69              1                    8476132     always @(*)
+# 
+#     70                                                begin
+# 
+#     71                                                 case(current_state)
+# 
+#     72                                               	  
+# 
+#     73                                               Idle     						: begin
+# 
+#     74                                               								if(Cardless == 1'b0)
+# 
+#     75              1                    1876042     									next_state = Insert_Card ;
+# 
+#     76                                               								else if (Cardless == 1'b1)
+# 
+#     77              1                    1875036     									next_state = Cardless_Transaction ;
+# 
+#     78                                               								else
+# 
+#     79              1                    ***0***     									next_state = Idle ;			  
+# 
+#     80                                               								end
+# 
+#     81                                               				 
+# 
+#     82                                               Insert_Card     				: begin
+# 
+#     83              1                    1251352     									next_state = Choose_Language ;			  
+# 
+#     84                                               								end
+# 
+#     85                                               				 
+# 
+#     86                                               Cardless_Transaction			: begin
+# 
+#     87              1                    1250090     									next_state = Choose_Language ;			  
+# 
+#     88                                               								end
+# 
+#     89                                               				 
+# 
+#     90                                               Choose_Language     			: begin
+# 
+#     91                                               								if(Language == 1'b0)
+# 
+#     92              1                     729171     									next_state = Choose_Language ;
+# 
+#     93                                               								else if (Language == 1'b1)
+# 
+#     94              1                     729797     									next_state = Enter_Pin_Or_OTP ;
+# 
+#     95                                               								else
+# 
+#     96              1                    ***0***     									next_state = Choose_Language ;			  
+# 
+#     97                                               								end
+# 
+#     98                                               				 
+# 
+#     99                                               Enter_Pin_Or_OTP     			: begin
+# 
+#     100                                              								if(User_Pass != Correct_Pass)
+# 
+#     101             1                         20     									next_state = Enter_Pin_Or_OTP ;
+# 
+#     102                                              								else if (User_Pass == Correct_Pass)
+# 
+#     103             1                     416753     									next_state = Choose_Transaction ;
+# 
+#     104                                              								else
+# 
+#     105             1                    ***0***     									next_state = Enter_Pin_Or_OTP ;			  
+# 
+#     106                                              								end
+# 
+#     107                                              				 
+# 
+#     108                                              Choose_Transaction     			: begin
+# 
+#     109                                              								if(Opcode == 4'b0000)
+# 
+#     110             1                      17143     									next_state = Choose_Transaction ;
+# 
+#     111                                              								else if ( (Opcode == 4'b0001) && (Cardless == 1'b0) )
+# 
+#     112             1                       8572     									next_state = View_Balance ;
+# 
+#     113                                              								else if ( (Opcode == 4'b0011) && (Cardless == 1'b0) )
+# 
+#     114             1                       8446     									next_state = Deposit ;
+# 
+#     115                                              								else if ( (Opcode == 4'b0010) && (Cardless == 1'b0) )
+# 
+#     116             1                       8509     									next_state = Withdraw ;
+# 
+#     117                                              								else if ( (Opcode == 4'b0110) && (Cardless == 1'b1) )
+# 
+#     118             1                       8330     									next_state = Exchange_Currency ;
+# 
+#     119                                              								else if ( (Opcode == 4'b0111) && (Cardless == 1'b1) )
+# 
+#     120             1                       8441     									next_state = Fawry_Payments ;
+# 
+#     121                                              								else if ( (Opcode == 4'b0101) && (Cardless == 1'b0) )
+# 
+#     122             1                       8647     									next_state = Money_Transfer ;
+# 
+#     123                                              								else if ( (Opcode == 4'b0100) && (Cardless == 1'b0) )
+# 
+#     124             1                       8481     									next_state = Mini_Bank_Statement ;
+# 
+#     125                                              								else if ( (Opcode == 4'b1100) && (Cardless == 1'b0) )
+# 
+#     126             1                       8319     									next_state = Credit_Card_Settlement ;
+# 
+#     127                                              								else
+# 
+#     128             1                     187791     									next_state = Choose_Transaction ;			  
+# 
+#     129                                              								end
+# 
+#     130                                              				 
+# 
+#     131                                              View_Balance     				: begin
+# 
+#     132                                              								if(Receipt == 1'b0)
+# 
+#     133             1                       2641     									next_state = One_More_Transaction ;
+# 
+#     134                                              								else if (Receipt == 1'b1)
+# 
+#     135             1                       2539     									next_state = Print_Reciept ;
+# 
+#     136                                              								else
+# 
+#     137             1                    ***0***     									next_state = View_Balance ;			  
+# 
+#     138                                              								end
+# 
+#     139                                              				 
+# 
+#     140                                              Deposit     					: begin
+# 
+#     141                                              								if(Money_Deposited == 1'b0)
+# 
+#     142             1                       2989     									next_state = Deposit ;
+# 
+#     143                                              								else if (Money_Deposited == 1'b1)
+# 
+#     144             1                       3019     									next_state = Confirm_Deposit ;
+# 
+#     145                                              								else
+# 
+#     146             1                    ***0***     									next_state = Deposit ;			  
+# 
+#     147                                              								end
+# 
+#     148                                              							
+# 
+#     149                                              Confirm_Deposit     			: begin
+# 
+#     150                                              								if(Receipt == 1'b0)
+# 
+#     151             1                        898     									next_state = One_More_Transaction ;
+# 
+#     152                                              								else if (Receipt == 1'b1)
+# 
+#     153             1                        818     									next_state = Print_Reciept ;
+# 
+#     154                                              								else
+# 
+#     155             1                    ***0***     									next_state = Confirm_Deposit ;			  
+# 
+#     156                                              								end
+# 
+#     157                                              				 
+# 
+#     158                                              Withdraw     					: begin
+# 
+#     159                                              								if(Quick_List == 1'b0)
+# 
+#     160             1                       3212     									next_state = Enter_Value_Manually ;
+# 
+#     161                                              								else if (Quick_List == 1'b1)
+# 
+#     162             1                       3144     									next_state = Check_Sufficient_Funds ;
+# 
+#     163                                              								else
+# 
+#     164             1                    ***0***     									next_state = Withdraw ;			  
+# 
+#     165                                              								end
+# 
+#     166                                              							
+# 
+#     167                                              Enter_Value_Manually     		: begin
+# 
+#     168                                              								if(Manual_Withdraw_Value == 1'b0)
+# 
+#     169             1                        905     									next_state = Enter_Value_Manually ;
+# 
+#     170                                              								else if (Manual_Withdraw_Value == 1'b1)
+# 
+#     171             1                        942     									next_state = Check_Sufficient_Funds ;
+# 
+#     172                                              								else
+# 
+#     173             1                    ***0***     									next_state = Enter_Value_Manually ;			  
+# 
+#     174                                              								end
+# 
+#     175                                              							
+# 
+#     176                                              Check_Sufficient_Funds     		: begin
+# 
+#     177                                              								if(Withdraw_Value > Existing_Balance)
+# 
+#     178             1                       2078     									next_state = Withdraw ;
+# 
+#     179                                              								else if (Withdraw_Value <= Existing_Balance)
+# 
+#     180             1                          4     									next_state = Confirm_Withdraw ;
+# 
+#     181                                              								else
+# 
+#     182             1                    ***0***     									next_state = Check_Sufficient_Funds ;			  
+# 
+#     183                                              								end
+# 
+#     184                                              							
+# 
+#     185                                              Confirm_Withdraw     			: begin
+# 
+#     186                                              								if(Receipt == 1'b0)
+# 
+#     187             1                    ***0***     									next_state = One_More_Transaction ;
+# 
+#     188                                              								else if (Receipt == 1'b1)
+# 
+#     189             1                          2     									next_state = Print_Reciept ;
+# 
+#     190                                              								else
+# 
+#     191             1                    ***0***     									next_state = Confirm_Withdraw ;			  
+# 
+#     192                                              								end
+# 
+#     193                                              				 
+# 
+#     194                                              Exchange_Currency     			: begin
+# 
+#     195                                              								if(Currency_Deposited == 1'b0)
+# 
+#     196             1                       3063     									next_state = Exchange_Currency ;
+# 
+#     197                                              								else if (Currency_Deposited == 1'b1)
+# 
+#     198             1                       3008     									next_state = Confirm_Exchange ;
+# 
+#     199                                              								else
+# 
+#     200             1                    ***0***     									next_state = Exchange_Currency ;			  
+# 
+#     201                                              								end
+# 
+#     202                                              				 
+# 
+#     203                                              Confirm_Exchange     			: begin
+# 
+#     204                                              								if(Receipt == 1'b0)
+# 
+#     205             1                        903     									next_state = One_More_Transaction ;
+# 
+#     206                                              								else if (Receipt == 1'b1)
+# 
+#     207             1                        895     									next_state = Print_Reciept ;
+# 
+#     208                                              								else
+# 
+#     209             1                    ***0***     									next_state = Confirm_Exchange ;			  
+# 
+#     210                                              								end
+# 
+#     211                                              							
+# 
+#     212                                              Fawry_Payments	     			: begin
+# 
+#     213             1                       5150     									next_state = Choose_Service ;			  
+# 
+#     214                                              								end
+# 
+#     215                                              							
+# 
+#     216                                              Choose_Service     				: begin
+# 
+#     217                                              								if(Service_Chosen == 1'b0)
+# 
+#     218             1                       1515     									next_state = Choose_Service ;
+# 
+#     219                                              								else if (Service_Chosen == 1'b1)
+# 
+#     220             1                       1507     									next_state = Enter_Mobile_No ;
+# 
+#     221                                              								else
+# 
+#     222             1                    ***0***     									next_state = Choose_Service ;			  
+# 
+#     223                                              								end
+# 
+#     224                                              							
+# 
+#     225                                              Enter_Mobile_No     			: begin
+# 
+#     226                                              								if(User_Mobile_No != Correct_Mobile_No)
+# 
+#     227             1                    ***0***     									next_state = Enter_Mobile_No ;
+# 
+#     228                                              								else if (User_Mobile_No == Correct_Mobile_No)
+# 
+#     229             1                        856     									next_state = Confirm_Service ;
+# 
+#     230                                              								else
+# 
+#     231             1                    ***0***     									next_state = Enter_Mobile_No ;			  
+# 
+#     232                                              								end
+# 
+#     233                                              							
+# 
+#     234                                              Confirm_Service     			: begin
+# 
+#     235                                              								if(Receipt == 1'b0)
+# 
+#     236             1                        197     									next_state = One_More_Transaction ;
+# 
+#     237                                              								else if (Receipt == 1'b1)
+# 
+#     238             1                        219     									next_state = Print_Reciept ;
+# 
+#     239                                              								else
+# 
+#     240             1                    ***0***     									next_state = Confirm_Service ;			  
+# 
+#     241                                              								end
+# 
+#     242                                              							
+# 
+#     243                                              Money_Transfer     				: begin
+# 
+#     244             1                       5258     									next_state = Bank_Account_And_Transfer_Value ;			  
+# 
+#     245                                              								end
+# 
+#     246                                              							
+# 
+#     247                                              Bank_Account_And_Transfer_Value : begin
+# 
+#     248                                              								if(User_Account_No != Correct_Account_No)
+# 
+#     249             1                    ***0***     									next_state = Bank_Account_And_Transfer_Value ;
+# 
+#     250                                              								else if (User_Account_No == Correct_Account_No)
+# 
+#     251             1                       3554     									next_state = Confirm_Balance_Available ;
+# 
+#     252                                              								else
+# 
+#     253             1                    ***0***     									next_state = Bank_Account_And_Transfer_Value ;			  
+# 
+#     254                                              								end
+# 
+#     255                                              							
+# 
+#     256                                              Confirm_Balance_Available     	: begin
+# 
+#     257                                              								if(Transfer_Value > Existing_Balance)
+# 
+#     258             1                       1762     									next_state = Bank_Account_And_Transfer_Value ;
+# 
+#     259                                              								else if (Transfer_Value <= Existing_Balance)
+# 
+#     260             1                          2     									next_state = Confirm_Transfer ;
+# 
+#     261                                              								else
+# 
+#     262             1                    ***0***     									next_state = Confirm_Balance_Available ;			  
+# 
+#     263                                              								end
+# 
+#     264                                              							
+# 
+#     265                                              Confirm_Transfer     			: begin
+# 
+#     266                                              								if(Receipt == 1'b0)
+# 
+#     267             1                    ***0***     									next_state = One_More_Transaction ;
+# 
+#     268                                              								else if (Receipt == 1'b1)
+# 
+#     269             1                    ***0***     									next_state = Print_Reciept ;
+# 
+#     270                                              								else
+# 
+#     271             1                    ***0***     									next_state = Confirm_Transfer ;			  
+# 
+#     272                                              								end
+# 
+#     273                                              							
+# 
+#     274                                              Mini_Bank_Statement     		: begin
+# 
+#     275                                              								if(Receipt == 1'b0)
+# 
+#     276             1                       2551     									next_state = One_More_Transaction ;
+# 
+#     277                                              								else if (Receipt == 1'b1)
+# 
+#     278             1                       2589     									next_state = Print_Reciept ;
+# 
+#     279                                              								else
+# 
+#     280             1                    ***0***     									next_state = Mini_Bank_Statement ;			  
+# 
+#     281                                              								end
+# 
+#     282                                              							
+# 
+#     283                                              Credit_Card_Settlement     		: begin
+# 
+#     284                                              								if(Credit_Card_Inserted == 1'b0)
+# 
+#     285             1                       2936     									next_state = Credit_Card_Settlement ;
+# 
+#     286                                              								else if (Credit_Card_Inserted == 1'b1)
+# 
+#     287             1                       2968     									next_state = Deposit_Desired_Settlement_Amount ;
+# 
+#     288                                              								else
+# 
+#     289             1                    ***0***     									next_state = Credit_Card_Settlement ;			  
+# 
+#     290                                              								end
+# 
+#     291                                              							
+# 
+#     292                                              Deposit_Desired_Settlement_Amount : begin
+# 
+#     293                                              								if(Settlement_Amount > 0)
+# 
+#     294             1                       1688     									next_state = Confirm_Settlement;
+# 
+#     295                                              								else
+# 
+#     296             1                    ***0***     									next_state = Deposit_Desired_Settlement_Amount ;			  
+# 
+#     297                                              								end
+# 
+#     298                                              							
+# 
+#     299                                              Confirm_Settlement     			: begin
+# 
+#     300                                              								if(Receipt == 1'b0)
+# 
+#     301             1                        399     									next_state = One_More_Transaction ;
+# 
+#     302                                              								else if (Receipt == 1'b1)
+# 
+#     303             1                        415     									next_state = Print_Reciept ;
+# 
+#     304                                              								else
+# 
+#     305             1                    ***0***     									next_state = Confirm_Settlement ;			  
+# 
+#     306                                              								end
+# 
+#     307                                              							
+# 
+#     308                                              				 
+# 
+#     309                                              Print_Reciept     				: begin
+# 
+#     310             1                       3709     									next_state = One_More_Transaction ;			  
+# 
+#     311                                              								end
+# 
+#     312                                              				 
+# 
+#     313                                              One_More_Transaction     		: begin
+# 
+#     314                                              								if(Another_Operation == 1'b0)
+# 
+#     315             1                       2735     									next_state = Eject_Card ;
+# 
+#     316                                              								else if (Another_Operation == 1'b1)
+# 
+#     317             1                       2807     									next_state = Choose_Transaction ;
+# 
+#     318                                              								else
+# 
+#     319             1                    ***0***     									next_state = One_More_Transaction ;			  
+# 
+#     320                                              								end
+# 
+#     321                                              				 
+# 
+#     322                                              Eject_Card     					: begin
+# 
+#     323             1                       1314     									next_state = Idle ;			  
+# 
+#     324                                              								end
+# 
+#     325                                              	
+# 
+#     326                                              	
+# 
+#     327             1                          1     default :   next_state = Idle ;		 
+# 
+#     328                                                
+# 
+#     329                                                endcase
+# 
+#     330                                              end	
+# 
+#     331                                              
+# 
+#     332                                              
+# 
+#     333                                              // next_state logic
+# 
+#     334             1                    3476133     always @(*)
+# 
+#     335                                               begin
+# 
+#     336                                                case(current_state)
+# 
+#     337                                                
+# 
+#     338                                              Idle     						: begin
+# 
+#     339             1                    1250726     									ATM_Usage_Finished        = 1'b0;   
+# 
+#     340             1                    1250726     									Balance_Shown             = 1'b0;
+# 
+#     341             1                    1250726     									Deposited_Successfully    = 1'b0;
+# 
+#     342             1                    1250726     									Withdrawed_Successfully   = 1'b0;
+# 
+#     343             1                    1250726     									Exchanged_Successfully    = 1'b0;
+# 
+#     344             1                    1250726     									Fawry_Service_Done        = 1'b0;
+# 
+#     345             1                    1250726     									Transferred_Successfully  = 1'b0;
+# 
+#     346             1                    1250726     									Bank_Statement_Produced   = 1'b0;
+# 
+#     347             1                    1250726     									Debt_Paid_Off             = 1'b0;
+# 
+#     348                                              								end 
+# 
+#     349                                              
+# 
+#     350                                              Insert_Card     				: begin
+# 
+#     351             1                     625680     									ATM_Usage_Finished        = 1'b0;
+# 
+#     352             1                     625680     									Balance_Shown             = 1'b0;
+# 
+#     353             1                     625680     									Deposited_Successfully    = 1'b0;
+# 
+#     354             1                     625680     									Withdrawed_Successfully   = 1'b0;
+# 
+#     355             1                     625680     									Exchanged_Successfully    = 1'b0;
+# 
+#     356             1                     625680     									Fawry_Service_Done        = 1'b0;
+# 
+#     357             1                     625680     									Transferred_Successfully  = 1'b0;
+# 
+#     358             1                     625680     									Bank_Statement_Produced   = 1'b0;
+# 
+#     359             1                     625680     									Debt_Paid_Off             = 1'b0;
+# 
+#     360                                              								end 
+# 
+#     361                                              
+# 
+#     362                                              Cardless_Transaction     		: begin
+# 
+#     363             1                     625045     									ATM_Usage_Finished        = 1'b0;
+# 
+#     364             1                     625045     									Balance_Shown             = 1'b0;
+# 
+#     365             1                     625045     									Deposited_Successfully    = 1'b0;
+# 
+#     366             1                     625045     									Withdrawed_Successfully   = 1'b0;
+# 
+#     367             1                     625045     									Exchanged_Successfully    = 1'b0;
+# 
+#     368             1                     625045     									Fawry_Service_Done        = 1'b0;
+# 
+#     369             1                     625045     									Transferred_Successfully  = 1'b0;
+# 
+#     370             1                     625045     									Bank_Statement_Produced   = 1'b0;
+# 
+#     371             1                     625045     									Debt_Paid_Off             = 1'b0;
+# 
+#     372                                              								end
+# 
+#     373                                              							
+# 
+#     374                                              Choose_Language     			: begin
+# 
+#     375             1                     625640     									ATM_Usage_Finished        = 1'b0;
+# 
+#     376             1                     625640     									Balance_Shown             = 1'b0;
+# 
+#     377             1                     625640     									Deposited_Successfully    = 1'b0;
+# 
+#     378             1                     625640     									Withdrawed_Successfully   = 1'b0;
+# 
+#     379             1                     625640     									Exchanged_Successfully    = 1'b0;
+# 
+#     380             1                     625640     									Fawry_Service_Done        = 1'b0;
+# 
+#     381             1                     625640     									Transferred_Successfully  = 1'b0;
+# 
+#     382             1                     625640     									Bank_Statement_Produced   = 1'b0;
+# 
+#     383             1                     625640     									Debt_Paid_Off             = 1'b0;
+# 
+#     384                                              								end
+# 
+#     385                                              							
+# 
+#     386                                              Enter_Pin_Or_OTP     			: begin
+# 
+#     387             1                     208382     									ATM_Usage_Finished        = 1'b0;
+# 
+#     388             1                     208382     									Balance_Shown             = 1'b0;
+# 
+#     389             1                     208382     									Deposited_Successfully    = 1'b0;
+# 
+#     390             1                     208382     									Withdrawed_Successfully   = 1'b0;
+# 
+#     391             1                     208382     									Exchanged_Successfully    = 1'b0;
+# 
+#     392             1                     208382     									Fawry_Service_Done        = 1'b0;
+# 
+#     393             1                     208382     									Transferred_Successfully  = 1'b0;
+# 
+#     394             1                     208382     									Bank_Statement_Produced   = 1'b0;
+# 
+#     395             1                     208382     									Debt_Paid_Off             = 1'b0;
+# 
+#     396                                              								end
+# 
+#     397                                              							
+# 
+#     398                                              Choose_Transaction     			: begin
+# 
+#     399             1                     104681     									ATM_Usage_Finished        = 1'b0;
+# 
+#     400             1                     104681     									Balance_Shown             = 1'b0;
+# 
+#     401             1                     104681     									Deposited_Successfully    = 1'b0;
+# 
+#     402             1                     104681     									Withdrawed_Successfully   = 1'b0;
+# 
+#     403             1                     104681     									Exchanged_Successfully    = 1'b0;
+# 
+#     404             1                     104681     									Fawry_Service_Done        = 1'b0;
+# 
+#     405             1                     104681     									Transferred_Successfully  = 1'b0;
+# 
+#     406             1                     104681     									Bank_Statement_Produced   = 1'b0;
+# 
+#     407             1                     104681     									Debt_Paid_Off             = 1'b0;
+# 
+#     408                                              								end
+# 
+#     409                                              							
+# 
+#     410                                              View_Balance     				: begin
+# 
+#     411             1                       2590     									ATM_Usage_Finished        = 1'b0;
+# 
+#     412             1                       2590     									Balance_Shown             = 1'b1;
+# 
+#     413             1                       2590     									Deposited_Successfully    = 1'b0;
+# 
+#     414             1                       2590     									Withdrawed_Successfully   = 1'b0;
+# 
+#     415             1                       2590     									Exchanged_Successfully    = 1'b0;
+# 
+#     416             1                       2590     									Fawry_Service_Done        = 1'b0;
+# 
+#     417             1                       2590     									Transferred_Successfully  = 1'b0;
+# 
+#     418             1                       2590     									Bank_Statement_Produced   = 1'b0;
+# 
+#     419             1                       2590     									Debt_Paid_Off             = 1'b0;
+# 
+#     420                                              								end
+# 
+#     421                                              							
+# 
+#     422                                              Deposit     					: begin
+# 
+#     423             1                       2575     									ATM_Usage_Finished        = 1'b0;
+# 
+#     424             1                       2575     									Balance_Shown             = 1'b0;
+# 
+#     425             1                       2575     									Deposited_Successfully    = 1'b0;
+# 
+#     426             1                       2575     									Withdrawed_Successfully   = 1'b0;
+# 
+#     427             1                       2575     									Exchanged_Successfully    = 1'b0;
+# 
+#     428             1                       2575     									Fawry_Service_Done        = 1'b0;
+# 
+#     429             1                       2575     									Transferred_Successfully  = 1'b0;
+# 
+#     430             1                       2575     									Bank_Statement_Produced   = 1'b0;
+# 
+#     431             1                       2575     									Debt_Paid_Off             = 1'b0;
+# 
+#     432                                              								end
+# 
+#     433                                              							
+# 
+#     434                                              Confirm_Deposit     			: begin
+# 
+#     435             1                        858     									ATM_Usage_Finished        = 1'b0;
+# 
+#     436             1                        858     									Balance_Shown             = 1'b0;
+# 
+#     437             1                        858     									Deposited_Successfully    = 1'b1;
+# 
+#     438             1                        858     									Withdrawed_Successfully   = 1'b0;
+# 
+#     439             1                        858     									Exchanged_Successfully    = 1'b0;
+# 
+#     440             1                        858     									Fawry_Service_Done        = 1'b0;
+# 
+#     441             1                        858     									Transferred_Successfully  = 1'b0;
+# 
+#     442             1                        858     									Bank_Statement_Produced   = 1'b0;
+# 
+#     443             1                        858     									Debt_Paid_Off             = 1'b0;
+# 
+#     444                                              								end
+# 
+#     445                                              							
+# 
+#     446                                              Withdraw     					: begin
+# 
+#     447             1                       3179     									ATM_Usage_Finished        = 1'b0;
+# 
+#     448             1                       3179     									Balance_Shown             = 1'b0;
+# 
+#     449             1                       3179     									Deposited_Successfully    = 1'b0;
+# 
+#     450             1                       3179     									Withdrawed_Successfully   = 1'b0;
+# 
+#     451             1                       3179     									Exchanged_Successfully    = 1'b0;
+# 
+#     452             1                       3179     									Fawry_Service_Done        = 1'b0;
+# 
+#     453             1                       3179     									Transferred_Successfully  = 1'b0;
+# 
+#     454             1                       3179     									Bank_Statement_Produced   = 1'b0;
+# 
+#     455             1                       3179     									Debt_Paid_Off             = 1'b0;
+# 
+#     456                                              								end
+# 
+#     457                                              							
+# 
+#     458                                              Enter_Value_Manually     		: begin
+# 
+#     459             1                        804     									ATM_Usage_Finished        = 1'b0;
+# 
+#     460             1                        804     									Balance_Shown             = 1'b0;
+# 
+#     461             1                        804     									Deposited_Successfully    = 1'b0;
+# 
+#     462             1                        804     									Withdrawed_Successfully   = 1'b0;
+# 
+#     463             1                        804     									Exchanged_Successfully    = 1'b0;
+# 
+#     464             1                        804     									Fawry_Service_Done        = 1'b0;
+# 
+#     465             1                        804     									Transferred_Successfully  = 1'b0;
+# 
+#     466             1                        804     									Bank_Statement_Produced   = 1'b0;
+# 
+#     467             1                        804     									Debt_Paid_Off             = 1'b0;
+# 
+#     468                                              								end
+# 
+#     469                                              							
+# 
+#     470                                              Check_Sufficient_Funds     		: begin
+# 
+#     471             1                       1041     									ATM_Usage_Finished        = 1'b0;
+# 
+#     472             1                       1041     									Balance_Shown             = 1'b0;
+# 
+#     473             1                       1041     									Deposited_Successfully    = 1'b0;
+# 
+#     474             1                       1041     									Withdrawed_Successfully   = 1'b0;
+# 
+#     475             1                       1041     									Exchanged_Successfully    = 1'b0;
+# 
+#     476             1                       1041     									Fawry_Service_Done        = 1'b0;
+# 
+#     477             1                       1041     									Transferred_Successfully  = 1'b0;
+# 
+#     478             1                       1041     									Bank_Statement_Produced   = 1'b0;
+# 
+#     479             1                       1041     									Debt_Paid_Off             = 1'b0;
+# 
+#     480                                              								end
+# 
+#     481                                              							
+# 
+#     482                                              Confirm_Withdraw     			: begin
+# 
+#     483             1                          2     									ATM_Usage_Finished        = 1'b0;
+# 
+#     484             1                          2     									Balance_Shown             = 1'b0;
+# 
+#     485             1                          2     									Deposited_Successfully    = 1'b0;
+# 
+#     486             1                          2     									Withdrawed_Successfully   = 1'b1;
+# 
+#     487             1                          2     									Exchanged_Successfully    = 1'b0;
+# 
+#     488             1                          2     									Fawry_Service_Done        = 1'b0;
+# 
+#     489             1                          2     									Transferred_Successfully  = 1'b0;
+# 
+#     490             1                          2     									Bank_Statement_Produced   = 1'b0;
+# 
+#     491             1                          2     									Debt_Paid_Off             = 1'b0;
+# 
+#     492                                              								end
+# 
+#     493                                              							
+# 
+#     494                                              Exchange_Currency     			: begin
+# 
+#     495             1                       2603     									ATM_Usage_Finished        = 1'b0;
+# 
+#     496             1                       2603     									Balance_Shown             = 1'b0;
+# 
+#     497             1                       2603     									Deposited_Successfully    = 1'b0;
+# 
+#     498             1                       2603     									Withdrawed_Successfully   = 1'b0;
+# 
+#     499             1                       2603     									Exchanged_Successfully    = 1'b0;
+# 
+#     500             1                       2603     									Fawry_Service_Done        = 1'b0;
+# 
+#     501             1                       2603     									Transferred_Successfully  = 1'b0;
+# 
+#     502             1                       2603     									Bank_Statement_Produced   = 1'b0;
+# 
+#     503             1                       2603     									Debt_Paid_Off             = 1'b0;
+# 
+#     504                                              								end  
+# 
+#     505                                              							
+# 
+#     506                                              Confirm_Exchange     			: begin
+# 
+#     507             1                        899     									ATM_Usage_Finished        = 1'b0;
+# 
+#     508             1                        899     									Balance_Shown             = 1'b0;
+# 
+#     509             1                        899     									Deposited_Successfully    = 1'b0;
+# 
+#     510             1                        899     									Withdrawed_Successfully   = 1'b0;
+# 
+#     511             1                        899     									Exchanged_Successfully    = 1'b1;
+# 
+#     512             1                        899     									Fawry_Service_Done        = 1'b0;
+# 
+#     513             1                        899     									Transferred_Successfully  = 1'b0;
+# 
+#     514             1                        899     									Bank_Statement_Produced   = 1'b0;
+# 
+#     515             1                        899     									Debt_Paid_Off             = 1'b0;
+# 
+#     516                                              								end 
+# 
+#     517                                              							
+# 
+#     518                                              Fawry_Payments     				: begin
+# 
+#     519             1                       2575     									ATM_Usage_Finished        = 1'b0;
+# 
+#     520             1                       2575     									Balance_Shown             = 1'b0;
+# 
+#     521             1                       2575     									Deposited_Successfully    = 1'b0;
+# 
+#     522             1                       2575     									Withdrawed_Successfully   = 1'b0;
+# 
+#     523             1                       2575     									Exchanged_Successfully    = 1'b0;
+# 
+#     524             1                       2575     									Fawry_Service_Done        = 1'b0;
+# 
+#     525             1                       2575     									Transferred_Successfully  = 1'b0;
+# 
+#     526             1                       2575     									Bank_Statement_Produced   = 1'b0;
+# 
+#     527             1                       2575     									Debt_Paid_Off             = 1'b0;
+# 
+#     528                                              								end
+# 
+#     529                                              							
+# 
+#     530                                              Choose_Service     				: begin
+# 
+#     531             1                       1282     									ATM_Usage_Finished        = 1'b0;
+# 
+#     532             1                       1282     									Balance_Shown             = 1'b0;
+# 
+#     533             1                       1282     									Deposited_Successfully    = 1'b0;
+# 
+#     534             1                       1282     									Withdrawed_Successfully   = 1'b0;
+# 
+#     535             1                       1282     									Exchanged_Successfully    = 1'b0;
+# 
+#     536             1                       1282     									Fawry_Service_Done        = 1'b0;
+# 
+#     537             1                       1282     									Transferred_Successfully  = 1'b0;
+# 
+#     538             1                       1282     									Bank_Statement_Produced   = 1'b0;
+# 
+#     539             1                       1282     									Debt_Paid_Off             = 1'b0;
+# 
+#     540                                              								end
+# 
+#     541                                              							
+# 
+#     542                                              Enter_Mobile_No     			: begin
+# 
+#     543             1                        428     									ATM_Usage_Finished        = 1'b0;
+# 
+#     544             1                        428     									Balance_Shown             = 1'b0;
+# 
+#     545             1                        428     									Deposited_Successfully    = 1'b0;
+# 
+#     546             1                        428     									Withdrawed_Successfully   = 1'b0;
+# 
+#     547             1                        428     									Exchanged_Successfully    = 1'b0;
+# 
+#     548             1                        428     									Fawry_Service_Done        = 1'b0;
+# 
+#     549             1                        428     									Transferred_Successfully  = 1'b0;
+# 
+#     550             1                        428     									Bank_Statement_Produced   = 1'b0;
+# 
+#     551             1                        428     									Debt_Paid_Off             = 1'b0;
+# 
+#     552                                              								end
+# 
+#     553                                              							
+# 
+#     554                                              Confirm_Service     			: begin
+# 
+#     555             1                        208     									ATM_Usage_Finished        = 1'b0;
+# 
+#     556             1                        208     									Balance_Shown             = 1'b0;
+# 
+#     557             1                        208     									Deposited_Successfully    = 1'b0;
+# 
+#     558             1                        208     									Withdrawed_Successfully   = 1'b0;
+# 
+#     559             1                        208     									Exchanged_Successfully    = 1'b0;
+# 
+#     560             1                        208     									Fawry_Service_Done        = 1'b1;
+# 
+#     561             1                        208     									Transferred_Successfully  = 1'b0;
+# 
+#     562             1                        208     									Bank_Statement_Produced   = 1'b0;
+# 
+#     563             1                        208     									Debt_Paid_Off             = 1'b0;
+# 
+#     564                                              								end
+# 
+#     565                                              							
+# 
+#     566                                              Money_Transfer     				: begin
+# 
+#     567             1                       2629     									ATM_Usage_Finished        = 1'b0;
+# 
+#     568             1                       2629     									Balance_Shown             = 1'b0;
+# 
+#     569             1                       2629     									Deposited_Successfully    = 1'b0;
+# 
+#     570             1                       2629     									Withdrawed_Successfully   = 1'b0;
+# 
+#     571             1                       2629     									Exchanged_Successfully    = 1'b0;
+# 
+#     572             1                       2629     									Fawry_Service_Done        = 1'b0;
+# 
+#     573             1                       2629     									Transferred_Successfully  = 1'b0;
+# 
+#     574             1                       2629     									Bank_Statement_Produced   = 1'b0;
+# 
+#     575             1                       2629     									Debt_Paid_Off             = 1'b0;
+# 
+#     576                                              								end
+# 
+#     577                                              							
+# 
+#     578                                              Bank_Account_And_Transfer_Value : begin
+# 
+#     579             1                       1777     									ATM_Usage_Finished        = 1'b0;
+# 
+#     580             1                       1777     									Balance_Shown             = 1'b0;
+# 
+#     581             1                       1777     									Deposited_Successfully    = 1'b0;
+# 
+#     582             1                       1777     									Withdrawed_Successfully   = 1'b0;
+# 
+#     583             1                       1777     									Exchanged_Successfully    = 1'b0;
+# 
+#     584             1                       1777     									Fawry_Service_Done        = 1'b0;
+# 
+#     585             1                       1777     									Transferred_Successfully  = 1'b0;
+# 
+#     586             1                       1777     									Bank_Statement_Produced   = 1'b0;
+# 
+#     587             1                       1777     									Debt_Paid_Off             = 1'b0;
+# 
+#     588                                              								end
+# 
+#     589                                              							
+# 
+#     590                                              Confirm_Balance_Available     	: begin
+# 
+#     591             1                        882     									ATM_Usage_Finished        = 1'b0;
+# 
+#     592             1                        882     									Balance_Shown             = 1'b0;
+# 
+#     593             1                        882     									Deposited_Successfully    = 1'b0;
+# 
+#     594             1                        882     									Withdrawed_Successfully   = 1'b0;
+# 
+#     595             1                        882     									Exchanged_Successfully    = 1'b0;
+# 
+#     596             1                        882     									Fawry_Service_Done        = 1'b0;
+# 
+#     597             1                        882     									Transferred_Successfully  = 1'b0;
+# 
+#     598             1                        882     									Bank_Statement_Produced   = 1'b0;
+# 
+#     599             1                        882     									Debt_Paid_Off             = 1'b0;
+# 
+#     600                                              								end
+# 
+#     601                                              							
+# 
+#     602                                              Confirm_Transfer     			: begin
+# 
+#     603             1                    ***0***     									ATM_Usage_Finished        = 1'b0;
+# 
+#     604             1                    ***0***     									Balance_Shown             = 1'b0;
+# 
+#     605             1                    ***0***     									Deposited_Successfully    = 1'b0;
+# 
+#     606             1                    ***0***     									Withdrawed_Successfully   = 1'b0;
+# 
+#     607             1                    ***0***     									Exchanged_Successfully    = 1'b0;
+# 
+#     608             1                    ***0***     									Fawry_Service_Done        = 1'b0;
+# 
+#     609             1                    ***0***     									Transferred_Successfully  = 1'b1;
+# 
+#     610             1                    ***0***     									Bank_Statement_Produced   = 1'b0;
+# 
+#     611             1                    ***0***     									Debt_Paid_Off             = 1'b0;
+# 
+#     612                                              								end
+# 
+#     613                                              							
+# 
+#     614                                              Mini_Bank_Statement     		: begin
+# 
+#     615             1                       2570     									ATM_Usage_Finished        = 1'b0;
+# 
+#     616             1                       2570     									Balance_Shown             = 1'b0;
+# 
+#     617             1                       2570     									Deposited_Successfully    = 1'b0;
+# 
+#     618             1                       2570     									Withdrawed_Successfully   = 1'b0;
+# 
+#     619             1                       2570     									Exchanged_Successfully    = 1'b0;
+# 
+#     620             1                       2570     									Fawry_Service_Done        = 1'b0;
+# 
+#     621             1                       2570     									Transferred_Successfully  = 1'b0;
+# 
+#     622             1                       2570     									Bank_Statement_Produced   = 1'b1;
+# 
+#     623             1                       2570     									Debt_Paid_Off             = 1'b0;
+# 
+#     624                                              								end
+# 
+#     625                                              							
+# 
+#     626                                              Credit_Card_Settlement     		: begin
+# 
+#     627             1                       2542     									ATM_Usage_Finished        = 1'b0;
+# 
+#     628             1                       2542     									Balance_Shown             = 1'b0;
+# 
+#     629             1                       2542     									Deposited_Successfully    = 1'b0;
+# 
+#     630             1                       2542     									Withdrawed_Successfully   = 1'b0;
+# 
+#     631             1                       2542     									Exchanged_Successfully    = 1'b0;
+# 
+#     632             1                       2542     									Fawry_Service_Done        = 1'b0;
+# 
+#     633             1                       2542     									Transferred_Successfully  = 1'b0;
+# 
+#     634             1                       2542     									Bank_Statement_Produced   = 1'b0;
+# 
+#     635             1                       2542     									Debt_Paid_Off             = 1'b0;
+# 
+#     636                                              								end
+# 
+#     637                                              							
+# 
+#     638                                              Deposit_Desired_Settlement_Amount: begin
+# 
+#     639             1                        844     									ATM_Usage_Finished        = 1'b0;
+# 
+#     640             1                        844     									Balance_Shown             = 1'b0;
+# 
+#     641             1                        844     									Deposited_Successfully    = 1'b0;
+# 
+#     642             1                        844     									Withdrawed_Successfully   = 1'b0;
+# 
+#     643             1                        844     									Exchanged_Successfully    = 1'b0;
+# 
+#     644             1                        844     									Fawry_Service_Done        = 1'b0;
+# 
+#     645             1                        844     									Transferred_Successfully  = 1'b0;
+# 
+#     646             1                        844     									Bank_Statement_Produced   = 1'b0;
+# 
+#     647             1                        844     									Debt_Paid_Off       = 1'b0;
+# 
+#     648                                              								end
+# 
+#     649                                              							
+# 
+#     650                                              Confirm_Settlement     			: begin
+# 
+#     651             1                        407     									ATM_Usage_Finished        = 1'b0;
+# 
+#     652             1                        407     									Balance_Shown             = 1'b0;
+# 
+#     653             1                        407     									Deposited_Successfully    = 1'b0;
+# 
+#     654             1                        407     									Withdrawed_Successfully   = 1'b0;
+# 
+#     655             1                        407     									Exchanged_Successfully    = 1'b0;
+# 
+#     656             1                        407     									Fawry_Service_Done        = 1'b0;
+# 
+#     657             1                        407     									Transferred_Successfully  = 1'b0;
+# 
+#     658             1                        407     									Bank_Statement_Produced   = 1'b0;
+# 
+#     659             1                        407     									Debt_Paid_Off             = 1'b1;
+# 
+#     660                                              								end
+# 
+#     661                                              							
+# 
+#     662                                              Print_Reciept     				: begin
+# 
+#     663             1                       1856     									ATM_Usage_Finished        = 1'b0;
+# 
+#     664             1                       1856     									Balance_Shown             = 1'b0;
+# 
+#     665             1                       1856     									Deposited_Successfully    = 1'b0;
+# 
+#     666             1                       1856     									Withdrawed_Successfully   = 1'b0;
+# 
+#     667             1                       1856     									Exchanged_Successfully    = 1'b0;
+# 
+#     668             1                       1856     									Fawry_Service_Done        = 1'b0;
+# 
+#     669             1                       1856     									Transferred_Successfully  = 1'b0;
+# 
+#     670             1                       1856     									Bank_Statement_Produced   = 1'b0;
+# 
+#     671             1                       1856     									Debt_Paid_Off             = 1'b0;
+# 
+#     672                                              								end
+# 
+#     673                                              							
+# 
+#     674                                              One_More_Transaction     		: begin
+# 
+#     675             1                       2771     									ATM_Usage_Finished        = 1'b0;
+# 
+#     676             1                       2771     									Balance_Shown             = 1'b0;
+# 
+#     677             1                       2771     									Deposited_Successfully    = 1'b0;
+# 
+#     678             1                       2771     									Withdrawed_Successfully   = 1'b0;
+# 
+#     679             1                       2771     									Exchanged_Successfully    = 1'b0;
+# 
+#     680             1                       2771     									Fawry_Service_Done        = 1'b0;
+# 
+#     681             1                       2771     									Transferred_Successfully  = 1'b0;
+# 
+#     682             1                       2771     									Bank_Statement_Produced   = 1'b0;
+# 
+#     683             1                       2771     									Debt_Paid_Off             = 1'b0;
+# 
+#     684                                              								end
+# 
+#     685                                              							
+# 
+#     686                                              Eject_Card     					: begin
+# 
+#     687             1                        657     									ATM_Usage_Finished        = 1'b1;
+# 
+#     688             1                        657     									Balance_Shown             = 1'b0;
+# 
+#     689             1                        657     									Deposited_Successfully    = 1'b0;
+# 
+#     690             1                        657     									Withdrawed_Successfully   = 1'b0;
+# 
+#     691             1                        657     									Exchanged_Successfully    = 1'b0;
+# 
+#     692             1                        657     									Fawry_Service_Done        = 1'b0;
+# 
+#     693             1                        657     									Transferred_Successfully  = 1'b0;
+# 
+#     694             1                        657     									Bank_Statement_Produced   = 1'b0;
+# 
+#     695             1                        657     									Debt_Paid_Off             = 1'b0;
+# 
+#     696                                              								end
+# 
+#     697                                              							
+# 
+#     698                                              default 						: begin
+# 
+#     699             1                    ***0***     									ATM_Usage_Finished        = 1'b0;
+# 
+#     700             1                    ***0***     									Balance_Shown             = 1'b0;
+# 
+#     701             1                    ***0***     									Deposited_Successfully    = 1'b0;
+# 
+#     702             1                    ***0***     									Withdrawed_Successfully   = 1'b0;
+# 
+#     703             1                    ***0***     									Exchanged_Successfully    = 1'b0;
+# 
+#     704             1                    ***0***     									Fawry_Service_Done        = 1'b0;
+# 
+#     705             1                    ***0***     									Transferred_Successfully  = 1'b0;
+# 
+#     706             1                    ***0***     									Bank_Statement_Produced   = 1'b0;
+# 
+#     707             1                    ***0***     									Debt_Paid_Off             = 1'b0;
+# 
+# 
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        324       283        41    87.34%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /ATM_TB/DUT --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                                 ATM_Usage_Finished           1           1      100.00 
+#                                  Another_Operation           1           1      100.00 
+#                                      Balance_Shown           1           1      100.00 
+#                            Bank_Statement_Produced           1           1      100.00 
+#                                           Cardless           1           1      100.00 
+#                                              Clock           1           1      100.00 
+#                               Credit_Card_Inserted           1           1      100.00 
+#                                 Currency_Deposited           1           1      100.00 
+#                                      Debt_Paid_Off           1           1      100.00 
+#                             Deposited_Successfully           1           1      100.00 
+#                             Exchanged_Successfully           1           1      100.00 
+#                                 Fawry_Service_Done           1           1      100.00 
+#                                           Language           1           1      100.00 
+#                              Manual_Withdraw_Value           1           1      100.00 
+#                                    Money_Deposited           1           1      100.00 
+#                                        Opcode[0-3]           1           1      100.00 
+#                                         Quick_List           1           1      100.00 
+#                                            Receipt           1           1      100.00 
+#                                              Reset           1           1      100.00 
+#                                     Service_Chosen           1           1      100.00 
+#                            Settlement_Amount[0-31]           1           1      100.00 
+#                               Transfer_Value[0-31]           1           1      100.00 
+#                           Transferred_Successfully           0           0        0.00 
+#                               User_Account_No[0-1]           1           1      100.00 
+#                               User_Account_No[2-7]           0           0        0.00 
+#                                 User_Account_No[8]           1           1      100.00 
+#                              User_Account_No[9-10]           0           0        0.00 
+#                             User_Account_No[11-12]           1           1      100.00 
+#                                User_Account_No[13]           0           0        0.00 
+#                             User_Account_No[14-15]           1           1      100.00 
+#                                User_Mobile_No[0-2]           0           1       50.00 
+#                                  User_Mobile_No[3]           0           0        0.00 
+#                                  User_Mobile_No[4]           0           1       50.00 
+#                                User_Mobile_No[5-9]           0           0        0.00 
+#                                 User_Mobile_No[10]           0           1       50.00 
+#                                       User_Pass[0]           0           0        0.00 
+#                                       User_Pass[1]           1           1      100.00 
+#                                       User_Pass[2]           0           0        0.00 
+#                                       User_Pass[3]           1           1      100.00 
+#                               Withdraw_Value[0-31]           1           1      100.00 
+#                            Withdrawed_Successfully           1           1      100.00 
+#                                 current_state[4-0]           1           1      100.00 
+#                                    next_state[4-0]           1           1      100.00 
+# 
+# Total Node Count     =        162 
+# Toggled Node Count   =        139 
+# Untoggled Node Count =         23 
+# 
+# Toggle Coverage      =      87.34% (283 of 324 bins)
+# 
+# =================================================================================
+# === Instance: /ATM_TB
+# === Design Unit: work.ATM_TB
+# =================================================================================
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                     353       353         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /ATM_TB --
+# NOTE: The modification timestamp for source file 'ATM_TB.v' has been altered since compilation.
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File ATM_TB.v
+#     1                                                module ATM_TB();
+# 
+#     2                                                reg        Clock_tb, Reset_tb, Cardless_tb, Language_tb, Money_Deposited_tb, Quick_List_tb, Manual_Withdraw_Value_tb, Currency_Deposited_tb, Service_Chosen_tb,Credit_Card_Inserted_tb, Receipt_tb, Another_Operation_tb;
+# 
+#     3                                                reg [3:0]  Opcode_tb,User_Pass_tb;
+# 
+#     4                                                reg [10:0] User_Mobile_No_tb;
+# 
+#     5                                                reg [15:0] User_Account_No_tb;
+# 
+#     6                                                reg [31:0] Withdraw_Value_tb,Transfer_Value_tb,Settlement_Amount_tb;
+# 
+#     7                                                wire       ATM_Usage_Finished_tb, Balance_Shown_tb, Deposited_Successfully_tb, Withdrawed_Successfully_tb, Exchanged_Successfully_tb, Fawry_Service_Done_tb, Transferred_Successfully_tb, Bank_Statement_Produced_tb, Debt_Paid_Off_tb;
+# 
+#     8                                                integer seed , j, i;
+# 
+#     9                                                
+# 
+#     10                                               
+# 
+#     11                                               initial
+# 
+#     12                                               	begin
+# 
+#     13              1                          1     		$dumpfile("ATM.vcd");
+# 
+#     14              1                          1     		$dumpvars;
+# 
+#     15              1                          1     		Clock_tb 					= 1'b1;
+# 
+#     16              1                          1     		Reset_tb					= 1'b0;
+# 
+#     17              1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     18              1                          1     		Language_tb					= 1'b0;
+# 
+#     19              1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     20              1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     21              1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     22              1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     23              1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     24              1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     25              1                          1     		Receipt_tb					= 1'b0;
+# 
+#     26              1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     27              1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     28              1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     29              1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     30              1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     31              1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     32              1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     33              1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     34                                               		
+# 
+#     35                                               		//Directed Testing	
+# 
+#     36              1                          1     		#10
+# 
+#     37              1                          1     		Reset_tb = 1'b1;
+# 
+#     38              1                          1     		#10
+# 
+#     39              1                          1     		Reset_tb = 1'b0;
+# 
+#     40              1                          1     		#10
+# 
+#     41                                               		
+# 
+#     42                                               			
+# 
+#     43                                               			//Withdraw using manual value test//
+# 
+#     44              1                          1     			Reset_tb 					= 1'b1;
+# 
+#     45              1                          1     			#10
+# 
+#     46              1                          1     			Cardless_tb 				= 1'b0;
+# 
+#     47              1                          1     			#10
+# 
+#     48              1                          1     			Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     49              1                          1     			#10
+# 
+#     50              1                          1     			Language_tb 				= 1'b1;
+# 
+#     51              1                          1     			#10
+# 
+#     52              1                          1     			User_Pass_tb 				= 4'b1010;
+# 
+#     53              1                          1     			#10
+# 
+#     54              1                          1     			Opcode_tb 					= 4'b0010;
+# 
+#     55              1                          1     			#10
+# 
+#     56              1                          1     			Quick_List_tb 				= 1'b0;
+# 
+#     57              1                          1     			#10
+# 
+#     58              1                          1     			Withdraw_Value_tb 			= 32'h00000040;
+# 
+#     59              1                          1     			#10
+# 
+#     60              1                          1     			Manual_Withdraw_Value_tb	= 1'b1;
+# 
+#     61              1                          1     			#10
+# 
+#     62              1                          1     			Receipt_tb 					= 1'b1;
+# 
+#     63              1                          1     			#10
+# 
+#     64              1                          1     			Another_Operation_tb 		= 1'b0;
+# 
+#     65              1                          1     			#10
+# 
+#     66                                               			//end of withdraw test
+# 
+#     67                                               		
+# 
+#     68                                               		
+# 
+#     69              1                          1     		Clock_tb 					= 1'b1;
+# 
+#     70              1                          1     		Reset_tb					= 1'b0;
+# 
+#     71              1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     72              1                          1     		Language_tb					= 1'b0;
+# 
+#     73              1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     74              1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     75              1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     76              1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     77              1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     78              1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     79              1                          1     		Receipt_tb					= 1'b0;
+# 
+#     80              1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     81              1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     82              1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     83              1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     84              1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     85              1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     86              1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     87              1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     88              1                          1     		#10
+# 
+#     89                                               		
+# 
+#     90                                               		
+# 
+#     91                                               			//View Balance
+# 
+#     92              1                          1     			Reset_tb 					= 1'b1;
+# 
+#     93              1                          1     			#10
+# 
+#     94              1                          1     			Cardless_tb 				= 1'b0;
+# 
+#     95              1                          1     			#10
+# 
+#     96              1                          1     			Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     97              1                          1     			#10
+# 
+#     98              1                          1     			Language_tb 				= 1'b1;
+# 
+#     99              1                          1     			#10
+# 
+#     100             1                          1     			User_Pass_tb 				= 4'b1010;
+# 
+#     101             1                          1     			#10
+# 
+#     102             1                          1     			Opcode_tb 					= 4'b0001;
+# 
+#     103             1                          1     			#10
+# 
+#     104             1                          1     			Receipt_tb 					= 1'b1;
+# 
+#     105             1                          1     			#10
+# 
+#     106             1                          1     			Another_Operation_tb 		= 1'b0;
+# 
+#     107             1                          1     			#10
+# 
+#     108                                              			//end of view balance test
+# 
+#     109                                              		
+# 
+#     110                                              		
+# 
+#     111             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     112             1                          1     		Reset_tb					= 1'b0;
+# 
+#     113             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     114             1                          1     		Language_tb					= 1'b0;
+# 
+#     115             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     116             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     117             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     118             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     119             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     120             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     121             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     122             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     123             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     124             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     125             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     126             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     127             1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     128             1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     129             1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     130             1                          1     		#10
+# 
+#     131                                              
+# 
+#     132                                              
+# 
+#     133                                              			//Deposit
+# 
+#     134             1                          1     			Reset_tb 					= 1'b1;
+# 
+#     135             1                          1     			#10
+# 
+#     136             1                          1     			Cardless_tb 				= 1'b0;
+# 
+#     137             1                          1     			#10
+# 
+#     138             1                          1     			Language_tb 				= 1'b1;
+# 
+#     139             1                          1     			#10
+# 
+#     140             1                          1     			User_Pass_tb 				= 4'b1010;
+# 
+#     141             1                          1     			#10
+# 
+#     142             1                          1     			Opcode_tb 					= 4'b0011;
+# 
+#     143             1                          1     			#10
+# 
+#     144             1                          1     			Money_Deposited_tb          = 1'b1;
+# 
+#     145             1                          1     			#10
+# 
+#     146             1                          1     			Receipt_tb 					= 1'b1;
+# 
+#     147             1                          1     			#10
+# 
+#     148             1                          1     			Another_Operation_tb 		= 1'b0;
+# 
+#     149             1                          1     			#10
+# 
+#     150                                              			// end of deposit test
+# 
+#     151                                              		
+# 
+#     152                                              		
+# 
+#     153             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     154             1                          1     		Reset_tb					= 1'b0;
+# 
+#     155             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     156             1                          1     		Language_tb					= 1'b0;
+# 
+#     157             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     158             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     159             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     160             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     161             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     162             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     163             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     164             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     165             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     166             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     167             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     168             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     169             1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     170             1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     171             1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     172             1                          1     		#10
+# 
+#     173                                              		
+# 
+#     174                                              
+# 
+#     175                                              			//Exchange Currency
+# 
+#     176             1                          1     			Reset_tb 					= 1'b1;
+# 
+#     177             1                          1     			#10
+# 
+#     178             1                          1     			Cardless_tb 				= 1'b1;
+# 
+#     179             1                          1     			#10
+# 
+#     180             1                          1     			Language_tb 				= 1'b1;
+# 
+#     181             1                          1     			#10
+# 
+#     182             1                          1     			User_Pass_tb 				= 4'b1010;
+# 
+#     183             1                          1     			#10
+# 
+#     184             1                          1     			Opcode_tb 					= 4'b0110;
+# 
+#     185             1                          1     			#10
+# 
+#     186             1                          1     			Currency_Deposited_tb 		= 1'b1;
+# 
+#     187             1                          1     			#10
+# 
+#     188             1                          1     			Receipt_tb 					= 1'b1;
+# 
+#     189             1                          1     			#10
+# 
+#     190             1                          1     			Another_Operation_tb 		= 1'b0;
+# 
+#     191             1                          1     			#10
+# 
+#     192                                              			// end of Exchange Currency test
+# 
+#     193                                              			
+# 
+#     194                                              			
+# 
+#     195             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     196             1                          1     		Reset_tb					= 1'b0;
+# 
+#     197             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     198             1                          1     		Language_tb					= 1'b0;
+# 
+#     199             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     200             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     201             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     202             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     203             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     204             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     205             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     206             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     207             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     208             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     209             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     210             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     211             1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     212             1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     213             1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     214             1                          1     		#10
+# 
+#     215                                              		
+# 
+#     216                                              		
+# 
+#     217                                              			//Withdraw using quick list
+# 
+#     218             1                          1     			Reset_tb 					= 1'b1;
+# 
+#     219             1                          1     			#10
+# 
+#     220             1                          1     			Cardless_tb 				= 1'b0;
+# 
+#     221             1                          1     			#10
+# 
+#     222             1                          1     			Language_tb 				= 1'b1;
+# 
+#     223             1                          1     			#10
+# 
+#     224             1                          1     			User_Pass_tb 				= 4'b1010;
+# 
+#     225             1                          1     			#10
+# 
+#     226             1                          1     			Opcode_tb 					= 4'b0010;
+# 
+#     227             1                          1     			#10
+# 
+#     228             1                          1     			Quick_List_tb 				= 1'b0;
+# 
+#     229             1                          1     			#10
+# 
+#     230             1                          1     			Withdraw_Value_tb 			= 32'h00000040;
+# 
+#     231             1                          1     			#10
+# 
+#     232             1                          1     			Manual_Withdraw_Value_tb	= 1'b1;
+# 
+#     233             1                          1     			#10
+# 
+#     234             1                          1     			Receipt_tb 					= 1'b1;
+# 
+#     235             1                          1     			#10
+# 
+#     236             1                          1     			Another_Operation_tb 		= 1'b0;
+# 
+#     237             1                          1     			#10
+# 
+#     238                                              			//end of withdraw using quick list
+# 
+#     239                                              			
+# 
+#     240                                              			
+# 
+#     241             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     242             1                          1     		Reset_tb					= 1'b0;
+# 
+#     243             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     244             1                          1     		Language_tb					= 1'b0;
+# 
+#     245             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     246             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     247             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     248             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     249             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     250             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     251             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     252             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     253             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     254             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     255             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     256             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     257             1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     258             1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     259             1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     260             1                          1     		#10
+# 
+#     261                                              		
+# 
+#     262                                              			//Fawry Payments test
+# 
+#     263             1                          1     			Reset_tb				= 1'b1;
+# 
+#     264             1                          1     			#10
+# 
+#     265             1                          1     			Cardless_tb				= 1'b1;
+# 
+#     266             1                          1     			#10
+# 
+#     267             1                          1     			Language_tb				= 1'b1;
+# 
+#     268             1                          1     			#10
+# 
+#     269             1                          1     			Opcode_tb				= 4'b0111;
+# 
+#     270             1                          1     			#10
+# 
+#     271             1                          1     			Service_Chosen_tb		= 1'b1;
+# 
+#     272             1                          1     			#10
+# 
+#     273             1                          1     			Receipt_tb				= 1'b1;
+# 
+#     274             1                          1     			#10
+# 
+#     275             1                          1     			Another_Operation_tb	= 1'b0;
+# 
+#     276             1                          1     			#10
+# 
+#     277                                              			//end of Fawry Payments test
+# 
+#     278                                              			
+# 
+#     279             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     280             1                          1     		Reset_tb					= 1'b0;
+# 
+#     281             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     282             1                          1     		Language_tb					= 1'b0;
+# 
+#     283             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     284             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     285             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     286             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     287             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     288             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     289             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     290             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     291             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     292             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     293             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     294             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     295             1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     296             1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     297             1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     298             1                          1     		#10
+# 
+#     299                                              			//Mini-Bank Statement test
+# 
+#     300             1                          1     			Reset_tb				= 1'b1;
+# 
+#     301             1                          1     			#10
+# 
+#     302             1                          1     			Cardless_tb				= 1'b0;
+# 
+#     303             1                          1     			#10
+# 
+#     304             1                          1     			Language_tb				= 1'b1;
+# 
+#     305             1                          1     			#10
+# 
+#     306             1                          1     			User_Pass_tb			= 4'b1010;
+# 
+#     307             1                          1     			#10
+# 
+#     308             1                          1     			Opcode_tb				= 4'b0100;
+# 
+#     309             1                          1     			#10
+# 
+#     310             1                          1     			Receipt_tb				= 1'b1;
+# 
+#     311             1                          1     			#10
+# 
+#     312                                              			Another_Operation_tb	= 1'b0;
+# 
+#     313                                              			#10
+# 
+#     314             1                          1     			//End of Mini-Bank Statement test
+# 
+#     315             1                          1     			
+# 
+#     316             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     317             1                          1     		Reset_tb					= 1'b0;
+# 
+#     318             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     319             1                          1     		Language_tb					= 1'b0;
+# 
+#     320             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     321             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     322             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     323             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     324             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     325             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     326             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     327             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     328             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     329             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     330             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     331             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     332             1                          1     		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     333             1                          1     		Transfer_Value_tb			= 32'h00000000;
+# 
+#     334                                              		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     335                                              		#10	
+# 
+#     336             1                          1     		
+# 
+#     337             1                          1     			//Money Transfer test
+# 
+#     338             1                          1     			Reset_tb				= 1'b1;
+# 
+#     339             1                          1     			#10
+# 
+#     340             1                          1     			Cardless_tb				= 1'b0;
+# 
+#     341             1                          1     			#10
+# 
+#     342             1                          1     			Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     343             1                          1     			#10
+# 
+#     344             1                          1     			User_Pass_tb			= 4'b1010;
+# 
+#     345             1                          1     			#10
+# 
+#     346             1                          1     			Language_tb				= 1'b1;
+# 
+#     347             1                          1     			#10
+# 
+#     348             1                          1     			Opcode_tb				= 4'b0101;
+# 
+#     349             1                          1     			#10
+# 
+#     350             1                          1     			User_Account_No_tb      = 16'hD903;
+# 
+#     351             1                          1     			#10
+# 
+#     352             1                          1     			Transfer_Value_tb		= 32'h00000001;
+# 
+#     353             1                          1     			#10
+# 
+#     354                                              			Receipt_tb				= 1'b1;
+# 
+#     355                                              			#10
+# 
+#     356             1                          1     			Another_Operation_tb	= 1'b0;
+# 
+#     357             1                          1     			#10
+# 
+#     358             1                          1     			//End of Money Transfer test
+# 
+#     359             1                          1     			
+# 
+#     360             1                          1     		Clock_tb 					= 1'b1;
+# 
+#     361             1                          1     		Reset_tb					= 1'b0;
+# 
+#     362             1                          1     		Cardless_tb                 = 1'b0;
+# 
+#     363             1                          1     		Language_tb					= 1'b0;
+# 
+#     364             1                          1     		Money_Deposited_tb			= 1'b0;
+# 
+#     365             1                          1     		Quick_List_tb				= 1'b0;
+# 
+#     366             1                          1     		Manual_Withdraw_Value_tb	= 1'b0;
+# 
+#     367             1                          1     		Currency_Deposited_tb		= 1'b0;
+# 
+#     368             1                          1     		Service_Chosen_tb           = 1'b0;
+# 
+#     369             1                          1     		Credit_Card_Inserted_tb     = 1'b0;
+# 
+#     370             1                          1     		Receipt_tb					= 1'b0;
+# 
+#     371             1                          1     		Another_Operation_tb		= 1'b0;
+# 
+#     372             1                          1     		Opcode_tb					= 4'b0000;
+# 
+#     373             1                          1     		User_Pass_tb				= 4'b0000;
+# 
+#     374             1                          1     		User_Mobile_No_tb           = 11'b00000000000;
+# 
+#     375             1                          1     		User_Account_No_tb          = 16'h0000;
+# 
+#     376                                              		Withdraw_Value_tb			= 32'h00000000;
+# 
+#     377                                              		Transfer_Value_tb			= 32'h00000000;
+# 
+#     378             1                          1     		Settlement_Amount_tb		= 32'h00000000;
+# 
+#     379                                              		#10			
+# 
+#     380             1                          1     		
+# 
+#     381             1                          1     		
+# 
+#     382             1                          1     		#100
+# 
+#     383             1                          1     		
+# 
+#     384             1                          1     		Reset_tb                    = 1'b1;
+# 
+#     385                                              		User_Pass_tb				= 4'b1010;
+# 
+#     386                                              		User_Mobile_No_tb           = 11'b10000010111;
+# 
+#     387                                              		User_Account_No_tb          = 16'hD903;
+# 
+#     388                                              		#20
+# 
+#     389             1                          1     		
+# 
+#     389             2                         50     
+#     390                                              
+# 
+#     391                                              
+# 
+#     392             1                         50     		//Randomized Testing
+# 
+#     393             1                         50     			for(j=0 ; j<70 ; j=j+1)
+# 
+#     394                                              			begin
+# 
+#     395             1                         50     			
+# 
+#     395             2                    4999950     
+#     396                                              				seed =j;
+# 
+#     397                                              				$display("seed is %d" , seed);
+# 
+#     398             1                    4999950     
+# 
+#     399             1                    4999950     					for(i=0 ; i<99999 ; i=i+1)
+# 
+#     400             1                    4999950     					begin
+# 
+#     401             1                    4999950     					
+# 
+#     402             1                    4999950     						#10
+# 
+#     403             1                    4999950     						Reset_tb				  =$random(seed);
+# 
+#     404             1                    4999950     						Cardless_tb               =$random(seed);              
+# 
+#     405             1                    4999950     						Language_tb               =$random(seed);
+# 
+#     406             1                    4999950     						Money_Deposited_tb        =$random(seed);
+# 
+#     407             1                    4999950     						Quick_List_tb             =$random(seed);
+# 
+#     408             1                    4999950     						Manual_Withdraw_Value_tb  =$random(seed);
+# 
+#     409             1                    4999950     						Currency_Deposited_tb     =$random(seed);
+# 
+#     410             1                    4999950     						Service_Chosen_tb         =$random(seed);
+# 
+#     411             1                    4999950     						Credit_Card_Inserted_tb   =$random(seed);
+# 
+#     412             1                    4999950     						Receipt_tb                =$random(seed);
+# 
+#     413             1                    4999950     						Another_Operation_tb      =$random(seed);
+# 
+#     414                                              						Opcode_tb                 =$random(seed);
+# 
+#     415                                              						Withdraw_Value_tb         =$random(seed);
+# 
+#     416                                              						Transfer_Value_tb         =$random(seed);
+# 
+#     417                                              						Settlement_Amount_tb      =$random(seed);
+# 
+#     418             1                          1     
+# 
+#     419                                              		end
+# 
+#     420                                              					end
+# 
+#     421                                              					
+# 
+#     422                                              		$finish;
+# 
+#     423                                              
+# 
+#     424             1                          1     	end									
+# 
+#     425             1                          1     
+# 
+#     426             1                   10000080     initial 
+# 
+#     426             2                   10000079     
+# 
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        496       372       124    75.00%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /ATM_TB --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                              ATM_Usage_Finished_tb           1           1      100.00 
+#                               Another_Operation_tb           1           1      100.00 
+#                                   Balance_Shown_tb           1           1      100.00 
+#                         Bank_Statement_Produced_tb           1           1      100.00 
+#                                        Cardless_tb           1           1      100.00 
+#                                           Clock_tb           1           1      100.00 
+#                            Credit_Card_Inserted_tb           1           1      100.00 
+#                              Currency_Deposited_tb           1           1      100.00 
+#                                   Debt_Paid_Off_tb           1           1      100.00 
+#                          Deposited_Successfully_tb           1           1      100.00 
+#                          Exchanged_Successfully_tb           1           1      100.00 
+#                              Fawry_Service_Done_tb           1           1      100.00 
+#                                        Language_tb           1           1      100.00 
+#                           Manual_Withdraw_Value_tb           1           1      100.00 
+#                                 Money_Deposited_tb           1           1      100.00 
+#                                     Opcode_tb[3-0]           1           1      100.00 
+#                                      Quick_List_tb           1           1      100.00 
+#                                         Receipt_tb           1           1      100.00 
+#                                           Reset_tb           1           1      100.00 
+#                                  Service_Chosen_tb           1           1      100.00 
+#                         Settlement_Amount_tb[31-0]           1           1      100.00 
+#                            Transfer_Value_tb[31-0]           1           1      100.00 
+#                        Transferred_Successfully_tb           0           0        0.00 
+#                          User_Account_No_tb[15-14]           1           1      100.00 
+#                             User_Account_No_tb[13]           0           0        0.00 
+#                          User_Account_No_tb[12-11]           1           1      100.00 
+#                           User_Account_No_tb[10-9]           0           0        0.00 
+#                              User_Account_No_tb[8]           1           1      100.00 
+#                            User_Account_No_tb[7-2]           0           0        0.00 
+#                            User_Account_No_tb[1-0]           1           1      100.00 
+#                              User_Mobile_No_tb[10]           0           1       50.00 
+#                             User_Mobile_No_tb[9-5]           0           0        0.00 
+#                               User_Mobile_No_tb[4]           0           1       50.00 
+#                               User_Mobile_No_tb[3]           0           0        0.00 
+#                             User_Mobile_No_tb[2-0]           0           1       50.00 
+#                                    User_Pass_tb[3]           1           1      100.00 
+#                                    User_Pass_tb[2]           0           0        0.00 
+#                                    User_Pass_tb[1]           1           1      100.00 
+#                                    User_Pass_tb[0]           0           0        0.00 
+#                            Withdraw_Value_tb[31-0]           1           1      100.00 
+#                         Withdrawed_Successfully_tb           1           1      100.00 
+#                                           i[31-17]           0           0        0.00 
+#                                            i[16-0]           1           1      100.00 
+#                                            j[31-6]           0           0        0.00 
+#                                               j[5]           0           1       50.00 
+#                                             j[4-0]           1           1      100.00 
+#                                         seed[31-0]           1           1      100.00 
+# 
+# Total Node Count     =        248 
+# Toggled Node Count   =        183 
+# Untoggled Node Count =         65 
+# 
+# Toggle Coverage      =      75.00% (372 of 496 bins)
+# 
+# 
+# ASSERTION RESULTS:
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /ATM_TB/DUT/assert__3
+#                      ATM.v(716)                         0          0
+# /ATM_TB/DUT/assert__2
+#                      ATM.v(715)                         0          1
+# /ATM_TB/DUT/assert__1
+#                      ATM.v(714)                         0          1
+# /ATM_TB/DUT/assert__0
+#                      ATM.v(713)                         0          1
+# 
+# Total Coverage By Instance (filtered view): 83.87%
+# 
+# End time: 22:10:29 on Dec 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
